@@ -1,0 +1,21 @@
+@import "Mixins";
+@import "Nav";
+:root{
+    --darkCyan:#0E8784;
+    --darkGeyBlue:#333D4B;
+    --paleOrange:#FDD6BA;
+    --lightCream:#FEFCF7;
+    --grey:#83888F;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+   background-color: #F2F2F2;
+    padding:0px;
+    margin:0px;
+}
+

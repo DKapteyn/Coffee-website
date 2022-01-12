@@ -1,0 +1,59 @@
+@mixin title-ab-fontDesign{
+    font-size: 150px;
+    line-height: 72px;
+    font-weight: 900;
+    font-family: 'Fraunces', serif;
+}
+
+@mixin H1-fontDesign{
+font-size: 72px;
+line-height: 72px;
+ font-weight: 900;
+    font-family: 'Fraunces', serif;
+}
+
+@mixin H2-fontDesign{
+    font-size: 40px;
+    line-height: 48px;
+     font-weight: 900;
+        font-family: 'Fraunces', serif;
+
+}
+
+@mixin H3-fontDesign{
+    font-size: 32px;
+    line-height: 36px;
+     font-weight: 900;
+        font-family: 'Fraunces', serif;
+
+}
+
+@mixin H4-fontDesign{
+    font-size: 24px;
+    line-height: 32px;
+     font-weight: 900;
+        font-family: 'Fraunces', serif;
+
+}
+
+@mixin body-fontDesign{
+    font-size: 16px;
+    line-height: 26px;
+     font-weight: 400;
+     font-family: 'Barlow', sans-serif;
+
+}
+
+@mixin navMenu-fontDesign{
+    font-size: 12px;
+    line-height: 15px;
+     font-weight: 700;
+     font-family: 'Barlow', sans-serif;
+     letter-spacing: 1px;
+
+}
+
+
+
+
+
