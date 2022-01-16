@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Subscribe from "./pages/Subscribe";
@@ -8,7 +8,7 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+     
         <Nav />
         <Routes>
           <Route path="/" element={<Navigate to="Home"/>} />
@@ -16,7 +16,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Subscribe" element={<Subscribe />} />
         </Routes>
-      </BrowserRouter>
+     
     </div>
   );
 }
