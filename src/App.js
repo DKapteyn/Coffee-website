@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Subscribe from "./pages/Subscribe";
-import "./sass/App.scss";
+import "./sass/App.scss"
 import Nav from "./components/Nav";
 
 function App() {
@@ -11,10 +11,10 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="Home" element={<Home />} />
-          <Route path="About" element={<About />} />
-          <Route path="Subscribe" element={<Subscribe />} />
+          <Route path="/" element={<Navigate to="Home"/>} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Subscribe" element={<Subscribe />} />
         </Routes>
       </BrowserRouter>
     </div>

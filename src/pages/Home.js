@@ -1,11 +1,9 @@
-
+import HeroPicHome from "../components/Home/HeroPicHome";
 
 export default function Home() {
-    return (
-        <div>
-            
-          
-
-        </div>
-    )
+  return (
+    <div>
+      <HeroPicHome />
+    </div>
+  );
 }

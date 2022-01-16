@@ -1,0 +1,44 @@
+@use "../Mixins" as *;
+
+.home--heroPicContainer {
+  display: grid;
+  width: 100%;
+}
+
+.home--heroPic {
+  grid-area: heroPic;
+  border-radius: 10px;
+}
+
+.home--heroPicText {
+  grid-area: heroText;
+  width: 500px;
+  height: 367px;
+  color: var(--lightCream);
+  margin-left: 85px;
+}
+
+.home--heroPicTitle {
+  @include H1-fontDesign;
+  width: auto;
+  margin-bottom: 32px;
+  margin-top: 117px;
+}
+
+.home--heroPicPara {
+  @include body-fontDesign;
+  max-width: 445px;
+  margin-bottom: 56px;
+}
+
+.home--heroPicButton {
+  background-color: var(--darkCyan);
+  width: 217px;
+  height: 56px;
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  color: var(--lightCream);
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+}
