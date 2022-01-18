@@ -1,6 +1,7 @@
 @use "./Mixins.scss" as *;
 @use "Nav";
 @use "./Home/HeroPicHome.scss";
+@use "./Home/OurCollection.scss";
 
 :root {
   --darkCyan: #0e8784;
