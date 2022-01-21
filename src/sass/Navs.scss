@@ -1,0 +1,51 @@
+@import "Mixins";
+
+//Both NAV
+
+.Nav--links {
+  display: flex;
+  gap: 33px;
+
+  a {
+    text-decoration: none;
+    color: var(--grey);
+    @include navMenu-fontDesign;
+  }
+}
+
+//TOP NAV
+
+.TopNav--container {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+  width: 1280px;
+}
+
+//BOTTOM NAV
+.BottomNav--container {
+  display: flex;
+  background-color: var(--backgroundGrey);
+  height: 120px;
+  width: 1280px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 200px auto 88px auto;
+  padding: 47px 85px;
+}
+
+.BottomNav--text {
+  display: flex;
+  align-items: center;
+  gap: 103px;
+}
+
+.BottomNav--companyLogo {
+  fill: white;
+}
+
+.BottomNav--socialMedia {
+  display: flex;
+  gap: 24px;
+  margin-left: 200px;
+}

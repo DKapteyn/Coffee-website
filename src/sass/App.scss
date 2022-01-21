@@ -1,8 +1,9 @@
 @use "./Mixins.scss" as *;
-@use "Nav";
+@use "Navs";
 @use "./Home/HeroPicHome.scss";
 @use "./Home/OurCollection.scss";
-@use "./Home/WhyChooseUs.scss";
+@use "./Home/WhyUs.scss";
+@use "./Home/HowItWorks.scss";
 
 :root {
   --darkCyan: #0e8784;
@@ -10,7 +11,7 @@
   --paleOrange: #fdd6ba;
   --lightCream: #fefcf7;
   --grey: #83888f;
-  --backgroundGrey:#2C343E;
+  --backgroundGrey: #2c343e;
 }
 
 * {
@@ -22,4 +23,21 @@ body {
   background-color: #f2f2f2;
   padding: 0px;
   margin: 0px;
+  height: 100%;
+}
+
+.createPlanButton {
+  background-color: var(--darkCyan);
+  width: 217px;
+  height: 56px;
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  color: var(--lightCream);
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #66d2cf;
+  }
 }

@@ -1,13 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-export default function HeroPicHome() {
-  const navigate = useNavigate();
-
-  function navSubscribe() {
-    navigate("/Subscribe");
-  }
-
+export default function HeroPicHome({ navSubscribe }) {
   return (
     <div className="home--heroPicContainer">
       <img
@@ -23,7 +16,7 @@ export default function HeroPicHome() {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <button onClick={navSubscribe} className="home--heroPicButton">
+        <button onClick={navSubscribe} className="createPlanButton">
           Create your plan
         </button>
       </div>

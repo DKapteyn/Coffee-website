@@ -1,0 +1,67 @@
+@use "../Mixins.scss" as *;
+
+.whyUsContainer {
+  display: grid;
+  color: var(--lightCream);
+  width: 1280px;
+  margin: 165px auto 0px auto;
+}
+
+.titleContainer {
+  grid-area: title;
+  background-color: var(--backgroundGrey);
+  width: inherit;
+  height: 577px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.whyUsTitle {
+  @include H2-fontDesign;
+  margin-top: 100px;
+}
+
+.whyUsPara {
+  @include body-fontDesign;
+  width: 540px;
+  margin: auto;
+}
+
+//THREE BENEFIT CONTAINERS
+
+.threeBenefitsContainer {
+  grid-area: benefits;
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  margin-top: 346px;
+  gap: 30px;
+}
+
+.benefitContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--darkCyan);
+  width: 350px;
+  height: 382px;
+  border-radius: 10px;
+  align-items: center;
+  padding: 72px 48px 48px 48px;
+  text-align: center;
+}
+
+#truckPic {
+  margin-top: 22px;
+}
+
+.threeBenefitsTitle {
+  margin-top: 56px;
+  @include H4-fontDesign;
+  margin-bottom: 8px;
+}
+
+.threeBenefitsPara {
+  margin-bottom: 0px;
+
+  @include body-fontDesign;
+}

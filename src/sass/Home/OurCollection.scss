@@ -4,35 +4,30 @@
   display: grid;
   width: 1280px;
   margin: 39px auto;
-
 }
 .collectionTitleContainer {
-    grid-area: collectionTitle;
-    height: fit-content;
-     
+  grid-area: collectionTitle;
+  height: fit-content;
 }
 
 .collectionTitle {
- 
   @include title-ab-fontDesign;
   background: linear-gradient(180deg, #83888f, #fefcf7);
   background-clip: text;
   -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   text-align: center;
-  opacity:0.8;
+  opacity: 0.8;
   z-index: 0;
-
 }
 
-.coffeeTypeContainer{
- grid-area: coffeeType;
-    display:flex;
- margin: 200px auto 0px auto;
- justify-content: space-between;
-z-index: 1;
-width:inherit;
-
+.coffeeTypeContainer {
+  grid-area: coffeeType;
+  display: flex;
+  margin: 200px auto 0px auto;
+  justify-content: space-between;
+  z-index: 1;
+  width: inherit;
 }
 
 .coffeeType {
@@ -43,14 +38,14 @@ width:inherit;
   width: 255px;
 }
 
-.desktopBeanBagPic{
-    width: 253px;
-    height:193px;
+.desktopBeanBagPic {
+  width: 253px;
+  height: 193px;
 }
 
 .beanName {
   @include H4-fontDesign;
-  margin-top:71px;
+  margin-top: 71px;
   margin-bottom: 8px;
 }
 

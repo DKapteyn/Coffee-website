@@ -1,0 +1,58 @@
+@use "../Mixins.scss" as *;
+
+.HIWContainer {
+  width: 1045px;
+  margin: 200px auto 0px 240px;
+}
+
+.HIWTitle {
+  @include H4-fontDesign;
+  color: var(--grey);
+}
+
+.HIWSectionContainer {
+  display: flex;
+  justify-content: center;
+  gap: 95px;
+}
+
+.HIWNumber {
+  @include H1-fontDesign;
+  color: var(--paleOrange);
+}
+
+.HIWSection {
+  width: 285px;
+}
+
+.HIWCircles {
+  display: flex;
+  justify-content: center;
+  margin-right: 256px;
+}
+
+.HIWCircle {
+  width: 29px;
+  height: 29px;
+  background-color: var(--lightCream);
+  border-radius: 50%;
+  border: 2px solid var(--darkCyan);
+  position: relative;
+}
+
+.HIWLine {
+  border-top: 2px solid var(--paleOrange);
+  width: 351px;
+  align-self: center;
+}
+
+.HIWSectionTitle {
+  @include H3-fontDesign;
+  color: var(--darkGreyBlue);
+}
+
+.HIWPara {
+  @include body-fontDesign;
+  color: var(--darkGreyBlue);
+  margin-bottom: 64px;
+}
