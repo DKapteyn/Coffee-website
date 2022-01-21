@@ -8,6 +8,7 @@
 }
 .collectionTitleContainer {
     grid-area: collectionTitle;
+    height: fit-content;
      
 }
 
@@ -27,7 +28,7 @@
 .coffeeTypeContainer{
  grid-area: coffeeType;
     display:flex;
- margin: 200px auto;
+ margin: 200px auto 0px auto;
  justify-content: space-between;
 z-index: 1;
 width:inherit;

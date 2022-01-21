@@ -2,13 +2,15 @@
 @use "Nav";
 @use "./Home/HeroPicHome.scss";
 @use "./Home/OurCollection.scss";
+@use "./Home/WhyChooseUs.scss";
 
 :root {
   --darkCyan: #0e8784;
-  --darkGeyBlue: #333d4b;
+  --darkGreyBlue: #333d4b;
   --paleOrange: #fdd6ba;
   --lightCream: #fefcf7;
   --grey: #83888f;
+  --backgroundGrey:#2C343E;
 }
 
 * {
