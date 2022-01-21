@@ -4,6 +4,10 @@
 @use "./Home/OurCollection.scss";
 @use "./Home/WhyUs.scss";
 @use "./Home/HowItWorks.scss";
+@use "./About/AboutUs.scss";
+@use "./About/OurCommitment.scss";
+@use "./About/UncompromsingQuality.scss";
+@use "./About/OurHeadquarters.scss";
 
 :root {
   --darkCyan: #0e8784;
@@ -40,4 +44,8 @@ body {
   &:hover {
     background-color: #66d2cf;
   }
+}
+
+.AboutPage {
+  display: grid;
 }

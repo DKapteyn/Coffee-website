@@ -1,0 +1,30 @@
+@use "../Mixins.scss" as *;
+
+.OurCommitment--Container {
+  display: grid;
+  width: 1110px;
+  grid-template-areas: "thisImage thisText";
+  gap: 125px;
+  margin: 168px auto 0px auto;
+}
+
+.OurCommitment--image {
+  grid-area: thisImage;
+  border-radius: 10px;
+}
+
+.OurCommitment--text {
+  grid-area: thisText;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.OurCommitment--title {
+  @include H2-fontDesign;
+  margin-bottom: 32px;
+}
+
+.OurCommitment--para {
+  @include body-fontDesign;
+}

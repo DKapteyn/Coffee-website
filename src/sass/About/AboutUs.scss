@@ -1,0 +1,26 @@
+@use "../Mixins.scss" as *;
+
+.AboutUs--Container {
+  display: grid;
+}
+
+.AboutUs--heroPic {
+  grid-area: AboutUsHeroPic;
+  border-radius: 10px;
+}
+
+.AboutUs--heroPicText {
+  grid-area: AboutUSHeroPicText;
+  color: var(--lightCream);
+  width: 445px;
+  margin: 137px 85px;
+}
+
+.AboutUs--title {
+  @include H2-fontDesign;
+  margin-bottom: 24px;
+  margin-top: 0px;
+}
+.AboutUs--para {
+  @include body-fontDesign;
+}

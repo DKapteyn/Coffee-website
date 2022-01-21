@@ -1,6 +1,6 @@
-import React from "react";
+import Button from "../Button";
 
-export default function HeroPicHome({ navSubscribe }) {
+export default function HeroPicHome() {
   return (
     <div className="home--heroPicContainer">
       <img
@@ -16,9 +16,7 @@ export default function HeroPicHome({ navSubscribe }) {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <button onClick={navSubscribe} className="createPlanButton">
-          Create your plan
-        </button>
+        <Button />
       </div>
     </div>
   );

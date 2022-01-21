@@ -1,22 +1,15 @@
-import { useNavigate } from "react-router-dom";
 import HeroPicHome from "../components/Home/HeroPicHome";
 import OurCollection from "../components/Home/OurCollection";
 import WhyUs from "../components/Home/WhyUs";
 import HowItWorks from "../components/Home/HowItWorks";
 
-export default function Home() {
-  const navigate = useNavigate();
-
-  function navSubscribe() {
-    navigate("/Subscribe");
-  }
-
+export default function HomePage() {
   return (
-    <div>
-      <HeroPicHome navSubscribe={navSubscribe} />
+    <div className="Home">
+      <HeroPicHome />
       <OurCollection />
       <WhyUs />
-      <HowItWorks navSubscribe={navSubscribe} />
+      <HowItWorks />
     </div>
   );
 }

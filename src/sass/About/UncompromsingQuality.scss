@@ -1,0 +1,33 @@
+@use "../Mixins.scss" as *;
+
+.UncompromisingQuality--Container {
+  display: flex;
+  background-image: url("bg-quality.png");
+  background-repeat: no-repeat;
+  margin: 244px auto 0px auto;
+  width: 1280px;
+  height: 474px;
+  position: relative;
+}
+
+.UncompromisingQuality--text {
+  width: 540px;
+  color: var(--lightCream);
+  margin: 88px 0px 0px 85px;
+}
+
+.UncompromisingQuality--title {
+  @include H2-fontDesign;
+  margin-bottom: 32px;
+}
+
+.UncompromisingQuality--para {
+  @include body-fontDesign;
+}
+
+.UncompromisingQuality--img {
+  border-radius: 10px;
+  position: absolute;
+  right: 85px;
+  bottom: 88px;
+}

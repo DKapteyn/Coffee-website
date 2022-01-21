@@ -1,0 +1,38 @@
+@use "../Mixins.scss" as *;
+
+.OurHeadquarters--LocationContainer {
+  display: flex;
+  justify-content: center;
+  gap: 95px;
+}
+
+.OurHeadquarters--mainTitle {
+  @include H4-fontDesign;
+  color: var(--grey);
+  margin: 168px auto 72px auto;
+  width: 1045px;
+}
+
+.OurHeadquarters--title {
+  @include H3-fontDesign;
+  color: var(--darkGreyBlue);
+}
+
+.australiaPic {
+  margin-bottom: 50px;
+}
+
+.canadaPic {
+  margin-bottom: 45px;
+}
+
+.UKPic {
+  margin-bottom: 46px;
+}
+
+.address {
+  @include body-fontDesign;
+  list-style-type: none;
+  padding-left: 0px;
+  width: 285px;
+}

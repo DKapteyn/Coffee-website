@@ -1,6 +1,6 @@
-import React from "react";
+import Button from "../Button";
 
-export default function HowItWorks({ navSubscribe }) {
+export default function HowItWorks() {
   return (
     <div className="HIWContainer">
       <h4 className="HIWTitle">How it works</h4>
@@ -42,9 +42,7 @@ export default function HowItWorks({ navSubscribe }) {
           </p>
         </div>
       </div>
-      <button onClick={navSubscribe} className="createPlanButton">
-        Create your plan
-      </button>
+      <Button />
     </div>
   );
 }
