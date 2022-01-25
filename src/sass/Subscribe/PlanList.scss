@@ -1,0 +1,29 @@
+@use "../Mixins.scss" as *;
+
+.planList {
+  width: 255px;
+  color: rgba(131, 136, 143, 0.4);
+  width: max-content;
+}
+
+.planList--item {
+  display: flex;
+  list-style-type: none;
+  border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+}
+
+.listNum {
+  align-self: center;
+  margin-right: 28.5px;
+}
+
+.listNum1 {
+  color: var(--darkCyan);
+  opacity: 0.4;
+}
+
+.listTitle,
+.listNum {
+  @include H4-fontDesign;
+  margin: 24px, 0px;
+}
