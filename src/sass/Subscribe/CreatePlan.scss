@@ -1,0 +1,26 @@
+@use "../Mixins.scss" as *;
+
+.CreatePlan--Container {
+  display: grid;
+  color: var(--lightCream);
+}
+
+.CreatePlan--heroPic {
+  grid-area: heroPic;
+  border-radius: 10px;
+}
+
+.CreatePlan--text {
+  grid-area: text;
+  padding: 134px 84px;
+}
+
+.CreatePlan--title {
+  @include H1-fontDesign;
+  margin-bottom: 32px;
+}
+
+.CreatePlan--para {
+  @include body-fontDesign;
+  width: 445px;
+}

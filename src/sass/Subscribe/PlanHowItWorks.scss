@@ -1,47 +1,46 @@
 @use "../Mixins.scss" as *;
 
-.HIWContainer {
-  width: 1110px;
-  margin: 200px auto 0px auto;
+.PlanHIW--container {
+  width: 1280px;
+  margin: auto;
+  background-image: url("bg-steps.png");
+  background-repeat: no-repeat;
+  margin-top: 177px;
 }
 
-.HIWTitle {
-  @include H4-fontDesign;
-  color: var(--grey);
-}
-
-.HIWSectionContainer {
+.PlanHIWSectionContainer {
   display: flex;
   justify-content: center;
   gap: 95px;
   margin-right: 70px;
 }
 
-.HIWNumber {
+.PlanHIWNumber {
   @include H1-fontDesign;
   color: var(--paleOrange);
 }
 
-.HIWSection {
+.PlanHIWSection {
   width: 285px;
 }
 
-.HIWCircles {
+.PlanHIWCircles {
   display: flex;
+  padding: 91px 0px 0px 85px;
 
   gap: 351px;
 }
 
-.HIWCircle {
+.PlanHIWCircle {
   width: 29px;
   height: 29px;
-  background-color: #f2f2f2;
+
   border-radius: 50%;
   border: 2px solid var(--darkCyan);
   z-index: 1;
 }
 
-.HIWLine {
+.PlanHIWLine {
   border-top: 2px solid var(--paleOrange);
   width: 760px;
   align-self: center;
@@ -50,13 +49,13 @@
   z-index: 0;
 }
 
-.HIWSectionTitle {
+.PlanHIWSectionTitle {
   @include H3-fontDesign;
-  color: var(--darkGreyBlue);
+  color: var(--lightCream);
 }
 
-.HIWPara {
+.PlanHIWPara {
   @include body-fontDesign;
-  color: var(--darkGreyBlue);
+  color: var(--lightCream);
   margin-bottom: 64px;
 }

@@ -8,8 +8,8 @@ export default function HowItWorks() {
         <div className="HIWCircle"></div>
         <div className="HIWLine"></div>
         <div className="HIWCircle"></div>
-        <div className="HIWLine"></div>
-        <div className="HIWCircle"></div>`
+        {/* <div className="HIWLine"></div> */}
+        <div className="HIWCircle"></div>
       </div>
 
       <div className="HIWSectionContainer">

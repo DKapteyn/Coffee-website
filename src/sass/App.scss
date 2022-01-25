@@ -8,8 +8,9 @@
 @use "./About/OurCommitment.scss";
 @use "./About/UncompromsingQuality.scss";
 @use "./About/OurHeadquarters.scss";
-
-:root {
+@use "./Subscribe/CreatePlan.scss";
+@use "./Subscribe/PlanHowItWorks.scss";
+:root  {
   --darkCyan: #0e8784;
   --darkGreyBlue: #333d4b;
   --paleOrange: #fdd6ba;
