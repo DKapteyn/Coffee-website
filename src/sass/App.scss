@@ -11,13 +11,16 @@
 @use "./Subscribe/CreatePlan.scss";
 @use "./Subscribe/PlanHowItWorks.scss";
 @use "./Subscribe/PlanList.scss";
-:root  {
+@use "./Subscribe/HowDoYouDrink.scss";
+@use "./Subscribe/Options.scss";
+:root {
   --darkCyan: #0e8784;
   --darkGreyBlue: #333d4b;
   --paleOrange: #fdd6ba;
   --lightCream: #fefcf7;
   --grey: #83888f;
   --backgroundGrey: #2c343e;
+  --borderRadius: 8px;
 }
 
 * {
@@ -26,7 +29,7 @@
 
 html,
 body {
-  background-color: #f2f2f2;
+  background-color: white;
   padding: 0px;
   margin: 0px;
   height: 100%;

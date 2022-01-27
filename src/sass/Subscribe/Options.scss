@@ -1,0 +1,41 @@
+@use "../Mixins.scss" as *;
+
+.Options--Container {
+  width: 730px;
+}
+
+.Options--MainTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Options--MainTitle {
+  margin-right: 79.5px;
+  @include H2-fontDesign;
+  color: var(--grey);
+}
+
+.Options--DropDownList {
+  display: flex;
+  gap: 23px;
+}
+
+.Options--DropDownItem {
+  width: 228px;
+  height: 250px;
+  padding: 32px 28px 84px 28px;
+  background-color: rgba(244, 241, 235, 1);
+  border-radius: var(--borderRadius);
+}
+
+.Options--SubTitle {
+  @include H4-fontDesign;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  width: max-content;
+}
+
+.Options--Para {
+  @include body-fontDesign;
+}
