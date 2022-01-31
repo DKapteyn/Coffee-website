@@ -11,7 +11,16 @@ export default function Options(props) {
     <div className="Options--Container">
       <div onClick={ChangeDropDown} className="Options--MainTitleContainer">
         <h2 className="Options--MainTitle">{props.MainTitle}</h2>
-        <img src="/mainAssets/assets/plan/desktop/icon-arrow.svg" alt="arrow" />
+        <img
+          //CAUSES ARROW TO FLIP WHEN DROPDOWN IS OPEN
+          style={
+            dropDown === true
+              ? { transform: "scaleY(-1)" }
+              : { transform: "scaleY(1)" }
+          }
+          src="/mainAssets/assets/plan/desktop/icon-arrow.svg"
+          alt="arrow"
+        />
       </div>
 
       {dropDown === true && (

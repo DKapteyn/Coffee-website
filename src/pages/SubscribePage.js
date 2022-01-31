@@ -8,8 +8,10 @@ export default function SubscribePage() {
     <div>
       <CreatePlan />
       <PlanHowItWorks />
-      <PlanList />
-      <HowDoYouDrink />
+      <div className="PlanandHowDo--Container">
+        <PlanList />
+        <HowDoYouDrink />
+      </div>
     </div>
   );
 }
