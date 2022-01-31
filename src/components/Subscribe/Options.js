@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function Options(props) {
   const [dropDown, setDropDown] = useState(false);
 
+  //CONTROLS OPTIONS DROPDOWN OPENING AND CLOSING AND TURNING ARROW IMAGE.
   function ChangeDropDown() {
     setDropDown((prevState) => (prevState === false ? true : false));
   }

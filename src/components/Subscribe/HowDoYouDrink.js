@@ -1,4 +1,5 @@
 import Options from "./Options";
+import OrderSummarywithButton from "./OrderSummarywithButton";
 
 export default function HowDoYouDrink() {
   return (
@@ -48,6 +49,7 @@ export default function HowDoYouDrink() {
         option3Title="Every month"
         option3Para="$22.50 per shipment. Includes free priority shipping."
       />
+      <OrderSummarywithButton />
     </div>
   );
 }
