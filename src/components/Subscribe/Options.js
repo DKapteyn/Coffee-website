@@ -23,18 +23,17 @@ export default function Options(props) {
           alt="arrow"
         />
       </div>
-
       {dropDown === true && (
         <div className="Options--DropDownList">
-          <div className="Options--DropDownItem">
+          <div className="Options--DropDownItem" onClick={props.clickOption1}>
             <h3 className="Options--SubTitle">{props.option1Title}</h3>
             <p className="Options--Para">{props.option1Para}</p>
           </div>
-          <div className="Options--DropDownItem">
+          <div className="Options--DropDownItem" onClick={props.clickOption2}>
             <h3 className="Options--SubTitle">{props.option2Title}</h3>
             <p className="Options--Para">{props.option2Para}</p>
           </div>
-          <div className="Options--DropDownItem">
+          <div className="Options--DropDownItem" onClick={props.clickOption3}>
             <h3 className="Options--SubTitle">{props.option3Title}</h3>
             <p className="Options--Para">{props.option3Para}</p>
           </div>

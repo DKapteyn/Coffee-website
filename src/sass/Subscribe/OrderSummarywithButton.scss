@@ -1,0 +1,28 @@
+@use "../Mixins.scss" as *;
+
+.orderSummary--Container {
+  width: 730px;
+  height: 208px;
+  padding: 27px 64px;
+  color: var(--lightCream);
+  background-color: var(--darkGreyBlue);
+  border-radius: var(--borderRadius);
+  margin-top: 88px;
+}
+
+.orderSummary--title {
+  @include body-fontDesign;
+  margin: 0px 0px 8px 0px;
+  color: var(--grey);
+}
+
+.orderSummary--para {
+  @include H4-fontDesign;
+  line-height: 40px;
+  width: 602px;
+  margin: 0px;
+}
+
+.summaryObject {
+  color: var(--darkCyan);
+}

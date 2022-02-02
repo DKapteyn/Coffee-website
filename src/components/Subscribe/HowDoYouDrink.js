@@ -1,7 +1,10 @@
 import Options from "./Options";
-import OrderSummarywithButton from "./OrderSummarywithButton";
+import { dispatchContext } from "../../pages/SubscribePage";
+import { useContext } from "react";
+import OrderSummaryWithButton from "./OrderSummarywithButton";
 
 export default function HowDoYouDrink() {
+  const dispatch = useContext(dispatchContext);
   return (
     <div>
       <Options
@@ -12,6 +15,9 @@ export default function HowDoYouDrink() {
         option2Para="For pour over or drip methods like Aeropress, Chemex, and V60"
         option3Title="Espresso"
         option3Para="Dense and finely ground beans for an intense, flavorful experience"
+        clickOption1={() => dispatch({ type: "Capsule" })}
+        clickOption2={() => dispatch({ type: "typeFilter" })}
+        clickOption3={() => dispatch({ type: "Espresso" })}
       />
       <Options
         MainTitle="What type of coffee?"
@@ -21,6 +27,9 @@ export default function HowDoYouDrink() {
         option2Para="Just like regular coffee, except the caffeine has been removed"
         option3Title="Blended"
         option3Para="Combination of two or three dark roasted beans of organic coffees"
+        clickOption1={() => dispatch({ type: "Single Origin" })}
+        clickOption2={() => dispatch({ type: "Decaf" })}
+        clickOption3={() => dispatch({ type: "Blended" })}
       />
       <Options
         MainTitle="How much would you like?"
@@ -30,6 +39,9 @@ export default function HowDoYouDrink() {
         option2Para="Perfect option for a couple. Yields about 40 delectable cups."
         option3Title="1000g"
         option3Para="Perfect for offices and events. Yields about 90 delightful cups."
+        clickOption1={() => dispatch({ type: "250g" })}
+        clickOption2={() => dispatch({ type: "500g" })}
+        clickOption3={() => dispatch({ type: "1000g" })}
       />
       <Options
         MainTitle="Want us to grind them?"
@@ -39,6 +51,9 @@ export default function HowDoYouDrink() {
         option2Para="For drip or pour-over coffee methods such as V60 or Aeropress"
         option3Title="Cafetiére"
         option3Para="Course ground beans specially suited for french press coffee"
+        clickOption1={() => dispatch({ type: "Wholebean" })}
+        clickOption2={() => dispatch({ type: "grindFilter" })}
+        clickOption3={() => dispatch({ type: "Cafetiére" })}
       />
       <Options
         MainTitle="How often should we deliver?"
@@ -48,8 +63,11 @@ export default function HowDoYouDrink() {
         option2Para="$17.25 per shipment. Includes free priority shipping."
         option3Title="Every month"
         option3Para="$22.50 per shipment. Includes free priority shipping."
+        clickOption1={() => dispatch({ type: "Every week" })}
+        clickOption2={() => dispatch({ type: "Every 2 weeks" })}
+        clickOption3={() => dispatch({ type: "Every Month" })}
       />
-      <OrderSummarywithButton />
+      <OrderSummaryWithButton />
     </div>
   );
 }
