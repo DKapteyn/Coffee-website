@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
-export default function Button() {
+export default function SubPageButton({ style }) {
   const navigate = useNavigate();
 
   function navSubscribe() {
     navigate("/Subscribe");
   }
   return (
-    <div>
-      <button onClick={navSubscribe} className="createPlanButton">
+    <div style={style}>
+      <button onClick={navSubscribe} className="Button">
         Create your plan
       </button>
     </div>

@@ -1,5 +1,6 @@
 @use "./Mixins.scss" as *;
-@use "Navs";
+@use "./Shared/Navs";
+@use "./Shared/Button.scss";
 @use "./Home/HeroPicHome.scss";
 @use "./Home/OurCollection.scss";
 @use "./Home/WhyUs.scss";
@@ -11,10 +12,9 @@
 @use "./Subscribe/CreatePlan.scss";
 @use "./Subscribe/PlanHowItWorks.scss";
 @use "./Subscribe/PlanList.scss";
-@use "./Subscribe/HowDoYouDrink.scss";
 @use "./Subscribe/Options.scss";
-@use "./Subscribe/OrderSummarywithButton.scss";
-
+@use "./Subscribe/OrderSummarySubscribe.scss";
+@use "./Subscribe/Modal.scss";
 :root {
   --darkCyan: #0e8784;
   --darkGreyBlue: #333d4b;
@@ -37,29 +37,19 @@ body {
   height: 100%;
 }
 
-.createPlanButton {
-  background-color: var(--darkCyan);
-  width: 217px;
-  height: 56px;
-  font-family: "Fraunces", serif;
-  font-size: 18px;
-  color: var(--lightCream);
-  border-radius: 7px;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #66d2cf;
-  }
-}
-
 .AboutPage {
   display: grid;
 }
 
 .PlanandHowDo--Container {
   display: flex;
+
   margin: 126px auto 0px auto;
   width: 1195px;
   justify-content: space-between;
+}
+
+.HIWButton--Container {
+  width: 1110px;
+  margin: 200px auto 0px auto;
 }

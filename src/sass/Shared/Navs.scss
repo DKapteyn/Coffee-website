@@ -1,4 +1,4 @@
-@import "Mixins";
+@import "../Mixins.scss";
 
 //Both NAV
 
@@ -30,7 +30,7 @@
   width: 1280px;
   align-items: center;
   justify-content: space-between;
-  margin: 200px auto 88px auto;
+  margin: 0px auto 88px auto;
   padding: 47px 85px;
 }
 

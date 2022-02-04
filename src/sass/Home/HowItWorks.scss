@@ -1,10 +1,5 @@
 @use "../Mixins.scss" as *;
 
-.HIWContainer {
-  width: 1110px;
-  margin: 200px auto 0px auto;
-}
-
 .HIWTitle {
   @include H4-fontDesign;
   color: var(--grey);

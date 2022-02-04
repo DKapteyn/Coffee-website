@@ -3,8 +3,8 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SubscribePage from "./pages/SubscribePage";
 import "./sass/App.scss";
-import TopNav from "./components/TopNav";
-import BottomNav from "./components/BottomNav";
+import TopNav from "./components/Shared/TopNav";
+import BottomNav from "./components/Shared/BottomNav";
 
 function App() {
   return (

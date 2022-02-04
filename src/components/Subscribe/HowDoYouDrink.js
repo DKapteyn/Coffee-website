@@ -1,12 +1,20 @@
 import Options from "./Options";
 import { dispatchContext } from "../../pages/SubscribePage";
-import { useContext } from "react";
-import OrderSummaryWithButton from "./OrderSummarywithButton";
+import { useContext, useState } from "react";
+import OrderSummaryTemplate from "./OrderSummaryTemplate";
+import CreateMyPlanButton from "./CreateMyPlanButton";
+import Modal from "./Modal";
 
 export default function HowDoYouDrink() {
   const dispatch = useContext(dispatchContext);
+  const [openModal, setOpenModal] = useState(false);
+
+  //Modal Toggle Function
+  function toggleModal() {
+    setOpenModal(!openModal);
+  }
   return (
-    <div>
+    <div HowDoYouDrink--Container>
       <Options
         MainTitle="How do you drink your coffee?"
         option1Title="Capsule"
@@ -67,7 +75,9 @@ export default function HowDoYouDrink() {
         clickOption2={() => dispatch({ type: "Every 2 weeks" })}
         clickOption3={() => dispatch({ type: "Every Month" })}
       />
-      <OrderSummaryWithButton />
+      <OrderSummaryTemplate classPrefix={""} />
+      <CreateMyPlanButton toggle={toggleModal} />
+      <Modal openModal={openModal} toggle={toggleModal} />
     </div>
   );
 }

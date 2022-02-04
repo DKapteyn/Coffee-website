@@ -1,11 +1,12 @@
 @use "../Mixins.scss" as *;
 
-.PlanHIW--container {
+.PlanHIWContainer {
   width: 1280px;
   margin: auto;
   background-image: url("bg-steps.png");
   background-repeat: no-repeat;
   margin-top: 177px;
+  border-radius: var(--borderRadius);
 }
 
 .PlanHIWSectionContainer {
@@ -13,6 +14,10 @@
   justify-content: center;
   gap: 95px;
   margin-right: 70px;
+}
+
+.PlanHIWTitle {
+  display: none;
 }
 
 .PlanHIWNumber {

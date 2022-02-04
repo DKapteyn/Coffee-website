@@ -1,8 +1,8 @@
-import { useReducer, createContext } from "react";
+import { useReducer, createContext, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import CreatePlan from "../components/Subscribe/CreatePlan";
 import HowDoYouDrink from "../components/Subscribe/HowDoYouDrink";
-
-import PlanHowItWorks from "../components/Subscribe/PlanHowItWorks";
+import HowItWorksTemplate from "../components/Shared/HowItWorksTemplate";
 import PlanList from "../components/Subscribe/PlanList";
 
 export const summaryContext = createContext("");
@@ -18,6 +18,15 @@ export default function SubscribePage() {
   };
 
   const [summary, dispatch] = useReducer(reducer, initialState);
+
+  function useScrollToTop() {
+    const location = useLocation();
+    useEffect(() => {
+      window.scrollTo({ top: 0 });
+    }, [location]);
+  }
+
+  useScrollToTop();
 
   function reducer(state, action) {
     switch (action.type) {
@@ -65,7 +74,7 @@ export default function SubscribePage() {
   return (
     <div>
       <CreatePlan />
-      <PlanHowItWorks />
+      <HowItWorksTemplate classPrefix={"PlanHIW"} />
       <dispatchContext.Provider value={dispatch}>
         <summaryContext.Provider value={summary}>
           <div className="PlanandHowDo--Container">
