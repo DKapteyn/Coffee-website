@@ -12,28 +12,58 @@
 
 .Modal--Container {
   position: fixed;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
   width: 540px;
   height: 597px;
   background-color: var(--lightCream);
+  border-radius: var(--borderRadius);
 }
 
-.modalorderSummary--title {
+.ModalorderSummary--title {
   display: none;
+}
+
+.Modal--titleContainer {
+  display: grid;
+  color: var(--lightCream);
+  height: 136px;
+  width: inherit;
+  background-color: var(--darkGreyBlue);
+  place-content: center;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
 }
 
 .Modal--title {
   @include H2-fontDesign;
-  color: var(--lightCream);
-  height: 136px;
-  background-color: var(--darkGreyBlue);
 }
-.modalorderSummary--para {
+.ModalorderSummary--para {
   @include H4-fontDesign;
   color: var(--grey);
   width: 428px;
   height: 160px;
+
+  margin: 57px auto 7px auto;
+}
+
+.Modal--para {
+  @include body-fontDesign;
+  margin: auto;
+  width: 428px;
+}
+
+.Modal--totalAndButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  width: 428px;
+  margin: 47px auto 0px auto;
+  align-items: center;
+}
+
+.Modal--monthTotal {
+  @include H3-fontDesign;
 }
