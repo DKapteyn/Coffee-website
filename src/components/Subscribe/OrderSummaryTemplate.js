@@ -9,7 +9,11 @@ export default function OrderSummarywithButton({ classPrefix }) {
       <div className={`${classPrefix}orderSummary`}>
         <p className={`${classPrefix}orderSummary--title`}>ORDER SUMMARY</p>
         <h4 className={`${classPrefix}orderSummary--para`}>
-          <span> "I drink my coffee using </span>
+          <span> "I drink my coffee </span>
+          {summary.how === "Capsules" && <span> using </span>}
+          {(summary.how === "Filter" || summary.how === "Espresso") && (
+            <span> as </span>
+          )}
           <span className="summaryObject">{summary.how}</span>
           <span> , with a </span>
           <span className="summaryObject">{summary.type}</span>

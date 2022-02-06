@@ -25,12 +25,21 @@
   width: 228px;
   height: 250px;
   padding: 32px 28px 84px 28px;
-  background-color: rgba(244, 241, 235, 1);
+
   border-radius: var(--borderRadius);
 
   &:hover {
     background-color: var(--paleOrange);
   }
+}
+
+.Options--Item {
+  background-color: rgba(244, 241, 235, 1);
+}
+
+.Options--clickedItem {
+  background-color: var(--darkCyan);
+  color: var(--lightCream);
 }
 
 .Options--SubTitle {

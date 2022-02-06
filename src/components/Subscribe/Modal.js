@@ -1,7 +1,43 @@
 import OrderSummaryTemplate from "./OrderSummaryTemplate";
-
+import { summaryContext } from "../../pages/SubscribePage";
+import { useContext } from "react";
 export default function Modal({ openModal, toggle }) {
+  const summary = useContext(summaryContext);
   if (!openModal) return null;
+  let price = "$0";
+
+  function setPrice() {
+    if (summary.amount === "250g") {
+      if (summary.frequency === "Every week") {
+        return (price = "$28.80");
+      } else if (summary.frequency === "Every 2 weeks") {
+        return (price = "$19.20");
+      } else {
+        return (price = "$12.00");
+      }
+    }
+    if (summary.amount === "500g") {
+      if (summary.frequency === "Every week") {
+        return (price = "$52.00");
+      } else if (summary.frequency === "Every 2 weeks") {
+        return (price = "$35.00");
+      } else {
+        return (price = "$22.00");
+      }
+    }
+    if (summary.amount === "1000g") {
+      if (summary.frequency === "Every week") {
+        return (price = "$88.00");
+      } else if (summary.frequency === "Every 2 weeks") {
+        return (price = "$64.00");
+      } else {
+        return (price = "$42.00");
+      }
+    }
+  }
+
+  setPrice();
+
   return (
     <div onClick={toggle} className="Modal--Overlay">
       <div className="Modal--Container">
@@ -15,7 +51,7 @@ export default function Modal({ openModal, toggle }) {
           redeemed at the checkout.
         </p>
         <div className="Modal--totalAndButtonContainer">
-          <div className="Modal--monthTotal">$14.00/mo</div>
+          <div className="Modal--monthTotal">{price}</div>
           <button className="Button">Checkout</button>
         </div>
       </div>

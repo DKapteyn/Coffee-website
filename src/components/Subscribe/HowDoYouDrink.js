@@ -41,7 +41,7 @@ export default function HowDoYouDrink() {
       />
       <Options
         MainTitle="How much would you like?"
-        option1Title=" 250g"
+        option1Title="250g"
         option1Para="Perfect for the solo drinker. Yields about 12 delicious cups."
         option2Title="500g"
         option2Para="Perfect option for a couple. Yields about 40 delectable cups."
