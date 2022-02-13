@@ -1,4 +1,4 @@
-import { useReducer, createContext, useEffect } from "react";
+import { useReducer, createContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import CreatePlan from "../components/Subscribe/CreatePlan";
 import HowDoYouDrink from "../components/Subscribe/HowDoYouDrink";
@@ -7,6 +7,7 @@ import PlanList from "../components/Subscribe/PlanList";
 
 export const summaryContext = createContext("");
 export const dispatchContext = createContext("");
+export const highlightContext = createContext("");
 
 export default function SubscribePage() {
   const initialState = {
@@ -15,9 +16,6 @@ export default function SubscribePage() {
     amount: "________",
     grindType: "",
     frequency: "_________",
-    option1: "",
-    option2: "",
-    option3: "",
   };
 
   const [summary, dispatch] = useReducer(reducer, initialState);
@@ -30,6 +28,14 @@ export default function SubscribePage() {
   }
 
   useScrollToTop();
+
+  const [highlight, setHighlight] = useState({
+    one: "active",
+    two: "",
+    three: "",
+    four: "",
+    five: "",
+  });
 
   function reducer(state, action) {
     switch (action.type) {
@@ -123,14 +129,14 @@ export default function SubscribePage() {
     <div>
       <CreatePlan />
       <HowItWorksTemplate classPrefix={"PlanHIW"} />
-      <dispatchContext.Provider value={dispatch}>
-        <summaryContext.Provider value={summary}>
+      <summaryContext.Provider value={{ summary, dispatch }}>
+        <highlightContext.Provider value={{ highlight, setHighlight }}>
           <div className="PlanandHowDo--Container">
             <PlanList />
             <HowDoYouDrink />
           </div>
-        </summaryContext.Provider>
-      </dispatchContext.Provider>
+        </highlightContext.Provider>
+      </summaryContext.Provider>
     </div>
   );
 }

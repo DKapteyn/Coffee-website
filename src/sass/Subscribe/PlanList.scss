@@ -2,7 +2,7 @@
 
 .planList {
   width: 255px;
-  color: rgba(131, 136, 143, 0.4);
+  color: rgb(131, 136, 143);
   width: max-content;
 }
 
@@ -10,6 +10,13 @@
   display: flex;
   list-style-type: none;
   border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+  opacity: 0.4;
+}
+.planList--itemactive {
+  display: flex;
+  list-style-type: none;
+  border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+  opacity: 1;
 }
 
 .listNum {
@@ -19,7 +26,6 @@
 
 .listNum1 {
   color: var(--darkCyan);
-  opacity: 0.4;
 }
 
 .listTitle,

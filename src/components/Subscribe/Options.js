@@ -1,7 +1,35 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { highlightContext, summaryContext } from "../../pages/SubscribePage";
 
 export default function Options(props) {
   const [dropDown, setDropDown] = useState(false);
+
+  const { setHighlight } = useContext(highlightContext);
+  const { summary } = useContext(summaryContext);
+  const sumRegex = /_+/;
+
+  function changeHightlight() {
+    setHighlight({ ...blankHighlight, two: "active" });
+    if (
+      sumRegex.test(summary.how) &&
+      sumRegex.test(summary.type) &&
+      sumRegex.test(summary.frequency) &&
+      summary.grind === "" &&
+      sumRegex.test(summary.amount)
+    ) {
+      setHighlight({ ...blankHighlight, one: "active" });
+    } else {
+      setHighlight({ ...blankHighlight, two: "active" });
+    }
+  }
+
+  const blankHighlight = {
+    one: "",
+    two: "",
+    three: "",
+    four: "",
+    five: "",
+  };
 
   const [clickedColor, setClickedColor] = useState({
     option1: "",
@@ -13,15 +41,19 @@ export default function Options(props) {
   function createClickedColorOption1() {
     props.clickOption1();
     setClickedColor({ option1: "clicked", option2: "", option3: "" });
+
+    changeHightlight();
   }
 
   function createClickedColorOption2() {
     props.clickOption2();
     setClickedColor({ option1: "", option2: "clicked", option3: "" });
+    changeHightlight();
   }
   function createClickedColorOption3() {
     props.clickOption3();
     setClickedColor({ option1: "", option2: "", option3: "clicked" });
+    changeHightlight();
   }
 
   //CONTROLS OPTIONS DROPDOWN OPENING AND CLOSING AND TURNING ARROW IMAGE.

@@ -1,12 +1,12 @@
 import Options from "./Options";
-import { dispatchContext } from "../../pages/SubscribePage";
+import { summaryContext } from "../../pages/SubscribePage";
 import { useContext, useState } from "react";
 import OrderSummaryTemplate from "./OrderSummaryTemplate";
 import CreateMyPlanButton from "./CreateMyPlanButton";
 import Modal from "./Modal";
 
 export default function HowDoYouDrink() {
-  const dispatch = useContext(dispatchContext);
+  const { dispatch } = useContext(summaryContext);
   const [openModal, setOpenModal] = useState(false);
 
   //Modal Toggle Function
