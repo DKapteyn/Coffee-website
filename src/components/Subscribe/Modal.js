@@ -2,7 +2,7 @@ import OrderSummaryTemplate from "./OrderSummaryTemplate";
 import { summaryContext } from "../../pages/SubscribePage";
 import { useContext } from "react";
 export default function Modal({ openModal, toggle }) {
-  const summary = useContext(summaryContext);
+  const { summary } = useContext(summaryContext);
   if (!openModal) return null;
   let price = "$0";
 
@@ -40,7 +40,7 @@ export default function Modal({ openModal, toggle }) {
 
   return (
     <div onClick={toggle} className="Modal--Overlay">
-      <div className="Modal--Container">
+      <div onClick={openModal} className="Modal--Container">
         <div className="Modal--titleContainer">
           <div className="Modal--title">Order Summary</div>
         </div>
@@ -51,7 +51,7 @@ export default function Modal({ openModal, toggle }) {
           redeemed at the checkout.
         </p>
         <div className="Modal--totalAndButtonContainer">
-          <div className="Modal--monthTotal">{price}</div>
+          <div className="Modal--monthTotal">{`${price}/mo`}</div>
           <button className="Button">Checkout</button>
         </div>
       </div>

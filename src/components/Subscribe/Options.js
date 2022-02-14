@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { highlightContext, summaryContext } from "../../pages/SubscribePage";
 
 export default function Options(props) {
@@ -6,31 +6,46 @@ export default function Options(props) {
 
   const { setHighlight } = useContext(highlightContext);
   const { summary } = useContext(summaryContext);
-  const sumRegex = /_+/;
 
-  function changeHightlight() {
-    setHighlight({ ...blankHighlight, two: "active" });
-    if (
-      sumRegex.test(summary.how) &&
-      sumRegex.test(summary.type) &&
-      sumRegex.test(summary.frequency) &&
-      summary.grind === "" &&
-      sumRegex.test(summary.amount)
-    ) {
-      setHighlight({ ...blankHighlight, one: "active" });
-    } else {
-      setHighlight({ ...blankHighlight, two: "active" });
+  // changes the highlighted option in the Planlist component
+  useEffect(() => {
+    function changeHightlight() {
+      //default is one highlighted
+      const sumRegex = /_+/;
+      const blankHighlight = {
+        one: "",
+        two: "",
+        three: "",
+        four: "",
+        five: "",
+      };
+
+      if (
+        sumRegex.test(summary.how) === false &&
+        sumRegex.test(summary.type) === false &&
+        sumRegex.test(summary.amount) === false &&
+        summary.grind !== undefined
+      ) {
+        setHighlight({ ...blankHighlight, five: "active" });
+      } else if (
+        sumRegex.test(summary.how) === false &&
+        sumRegex.test(summary.type) === false &&
+        sumRegex.test(summary.amount) === false
+      ) {
+        setHighlight({ ...blankHighlight, four: "active" });
+      } else if (
+        sumRegex.test(summary.how) === false &&
+        sumRegex.test(summary.type) === false
+      ) {
+        setHighlight({ ...blankHighlight, three: "active" });
+      } else if (sumRegex.test(summary.how) === false) {
+        setHighlight({ ...blankHighlight, two: "active" });
+      }
     }
-  }
+    changeHightlight();
+  }, [summary, setHighlight]);
 
-  const blankHighlight = {
-    one: "",
-    two: "",
-    three: "",
-    four: "",
-    five: "",
-  };
-
+  //Changes class to update the color of the option
   const [clickedColor, setClickedColor] = useState({
     option1: "",
     option2: "",
@@ -40,20 +55,20 @@ export default function Options(props) {
   //changes color for option one and changes the Ordersummary through props
   function createClickedColorOption1() {
     props.clickOption1();
-    setClickedColor({ option1: "clicked", option2: "", option3: "" });
 
-    changeHightlight();
+    setClickedColor({ option1: "clicked", option2: "", option3: "" });
   }
 
   function createClickedColorOption2() {
     props.clickOption2();
+
     setClickedColor({ option1: "", option2: "clicked", option3: "" });
-    changeHightlight();
   }
+
   function createClickedColorOption3() {
     props.clickOption3();
+
     setClickedColor({ option1: "", option2: "", option3: "clicked" });
-    changeHightlight();
   }
 
   //CONTROLS OPTIONS DROPDOWN OPENING AND CLOSING AND TURNING ARROW IMAGE.

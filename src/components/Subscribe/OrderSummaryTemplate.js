@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { summaryContext } from "../../pages/SubscribePage";
 
 export default function OrderSummarywithButton({ classPrefix }) {
-  const summary = useContext(summaryContext);
+  const { summary } = useContext(summaryContext);
 
   return (
     <div className={`${classPrefix}orderSummary--Container`}>
@@ -25,7 +25,7 @@ export default function OrderSummarywithButton({ classPrefix }) {
           <span className="summaryObject">{summary.grind}</span>
           <span> , sent to me </span>
           <span className="summaryObject">{summary.frequency}</span>
-          <span> . "</span>
+          <span>."</span>
         </h4>
       </div>
     </div>

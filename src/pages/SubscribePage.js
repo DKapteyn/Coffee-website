@@ -14,7 +14,7 @@ export default function SubscribePage() {
     how: "_________",
     type: "_________",
     amount: "________",
-    grindType: "",
+    grindType: undefined,
     frequency: "_________",
   };
 
@@ -56,7 +56,7 @@ export default function SubscribePage() {
           how: "Espresso",
         };
       //state for "what type of coffee"
-      case "single origin":
+      case "Single Origin":
         return {
           ...state,
           type: "Single Origin",
@@ -91,7 +91,7 @@ export default function SubscribePage() {
       case "Wholebean":
         return {
           ...state,
-          grind: "",
+          grind: null,
         };
       case "grindFilter":
         return {
