@@ -1,8 +1,46 @@
-import { highlightContext } from "../../pages/SubscribePage";
-import { useContext } from "react";
+import { highlightContext, summaryContext } from "../../pages/SubscribePage";
+import { useContext, useEffect } from "react";
 
 export default function PlanList() {
-  const { highlight } = useContext(highlightContext);
+  const { highlight, setHighlight } = useContext(highlightContext);
+  const { summary } = useContext(summaryContext);
+
+  useEffect(() => {
+    function changeHightlight() {
+      //default is one highlighted
+      const sumRegex = /_+/;
+      const blankHighlight = {
+        one: "",
+        two: "",
+        three: "",
+        four: "",
+        five: "",
+      };
+
+      if (
+        sumRegex.test(summary.how) === false &&
+        sumRegex.test(summary.type) === false &&
+        sumRegex.test(summary.amount) === false &&
+        (summary.grind !== undefined || summary.grindNeed === false)
+      ) {
+        setHighlight({ ...blankHighlight, five: "active" });
+      } else if (
+        sumRegex.test(summary.how) === false &&
+        sumRegex.test(summary.type) === false &&
+        sumRegex.test(summary.amount) === false
+      ) {
+        setHighlight({ ...blankHighlight, four: "active" });
+      } else if (
+        sumRegex.test(summary.how) === false &&
+        sumRegex.test(summary.type) === false
+      ) {
+        setHighlight({ ...blankHighlight, three: "active" });
+      } else if (sumRegex.test(summary.how) === false) {
+        setHighlight({ ...blankHighlight, two: "active" });
+      }
+    }
+    changeHightlight();
+  }, [summary, setHighlight]);
 
   return (
     <>

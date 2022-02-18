@@ -40,7 +40,7 @@ export default function Modal({ openModal, toggle }) {
 
   return (
     <div onClick={toggle} className="Modal--Overlay">
-      <div onClick={openModal} className="Modal--Container">
+      <div className="Modal--Container">
         <div className="Modal--titleContainer">
           <div className="Modal--title">Order Summary</div>
         </div>

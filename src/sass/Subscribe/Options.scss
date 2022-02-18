@@ -10,6 +10,13 @@
   justify-content: space-between;
 }
 
+.Options--falseMainTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.5;
+}
+
 .Options--MainTitle {
   margin-right: 79.5px;
   @include H2-fontDesign;

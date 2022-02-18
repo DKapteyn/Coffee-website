@@ -19,10 +19,11 @@ export default function OrderSummarywithButton({ classPrefix }) {
           <span className="summaryObject">{summary.type}</span>
           <span> type of bean. </span>
           <span className="summaryObject">{summary.amount} </span>
-          {(summary.grind === "Cafetiére" || summary.grind === "Filter") && (
-            <span> ground ala </span>
+          {(summary.grind === "Cafetiére" || summary.grind === "Filter") &&
+            summary.grindNeed === true && <span> ground ala </span>}
+          {summary.grindNeed === true && (
+            <span className="summaryObject">{summary.grind}</span>
           )}
-          <span className="summaryObject">{summary.grind}</span>
           <span> , sent to me </span>
           <span className="summaryObject">{summary.frequency}</span>
           <span>."</span>

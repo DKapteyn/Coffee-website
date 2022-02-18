@@ -6,16 +6,17 @@ import HowItWorksTemplate from "../components/Shared/HowItWorksTemplate";
 import PlanList from "../components/Subscribe/PlanList";
 
 export const summaryContext = createContext("");
-export const dispatchContext = createContext("");
+
 export const highlightContext = createContext("");
 
 export default function SubscribePage() {
   const initialState = {
-    how: "_________",
-    type: "_________",
-    amount: "________",
+    how: "_____",
+    type: "_____",
+    amount: "_____",
     grindType: undefined,
-    frequency: "_________",
+    frequency: "_____",
+    gridNeed: true,
   };
 
   const [summary, dispatch] = useReducer(reducer, initialState);
@@ -44,16 +45,19 @@ export default function SubscribePage() {
         return {
           ...state,
           how: "Capsules",
+          grindNeed: false,
         };
       case "typeFilter":
         return {
           ...state,
           how: "Filter",
+          grindNeed: true,
         };
       case "Espresso":
         return {
           ...state,
           how: "Espresso",
+          grindNeed: true,
         };
       //state for "what type of coffee"
       case "Single Origin":
