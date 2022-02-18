@@ -40,10 +40,49 @@
   font-family: "Barlow", sans-serif;
 }
 
+@mixin body-fontDesignSmall {
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.8;
+  font-family: Barlow;
+}
 @mixin navMenu-fontDesign {
   font-size: 12px;
   line-height: 15px;
   font-weight: 700;
   font-family: "Barlow", sans-serif;
   letter-spacing: 1px;
+}
+
+$mobile: 400px;
+$tablet: 800px;
+
+@mixin desktop {
+  @media (min-width: calc($tablet + 1px)) {
+    @content;
+  }
+}
+
+@mixin desktop-tablet {
+  @media (min-width: calc($mobile + 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) and (min-width: calc($mobile + 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet-mobile {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
 }

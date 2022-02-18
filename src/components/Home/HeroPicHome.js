@@ -1,13 +1,33 @@
 import Button from "./SubPageButton";
+import { widthContext } from "../../App";
+import { useContext } from "react";
 
 export default function HeroPicHome() {
+  const width = useContext(widthContext);
+  //global variables in App.js
+  const tablet = window.$tabletWidth;
+  const mobile = window.$mobileWidth;
   return (
     <div className="home--heroPicContainer">
-      <img
-        className="home--heroPic"
-        src="/mainAssets/assets/home/desktop/image-hero-coffeepress.jpg"
-        alt="home coffee pic"
-      />
+      {parseInt(width) > tablet ? (
+        <img
+          className="home--heroPic"
+          src="/mainAssets/assets/home/desktop/image-hero-coffeepress.jpg"
+          alt="home coffee pic"
+        />
+      ) : parseInt(width) > mobile ? (
+        <img
+          className="home--heroPic"
+          src="/mainAssets/assets/home/tablet/image-hero-coffeepress.jpg"
+          alt="home coffee pic"
+        />
+      ) : (
+        <img
+          className="home--heroPic"
+          src="/mainAssets/assets/home/mobile/image-hero-coffeepress.jpg"
+          alt="home coffee pic"
+        />
+      )}
 
       <div className="home--heroPicText">
         <h1 className="home--heroPicTitle">Great coffee made simple.</h1>
