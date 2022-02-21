@@ -2,12 +2,26 @@
 
 .home--collectionContainer {
   display: grid;
-  width: 1280px;
-  margin: 39px auto;
+  grid-template-areas:
+    "collectionTitle"
+    "coffeeType";
+
+  @include desktop {
+    width: 1280px;
+    margin: 39px auto;
+  }
+  @include tablet {
+    margin: 77px auto;
+  }
+
+  @include mobile {
+    height: 1500px;
+  }
 }
 .collectionTitleContainer {
   grid-area: collectionTitle;
   height: fit-content;
+  margin: 0px auto;
 }
 
 .collectionTitle {
@@ -19,38 +33,102 @@
   text-align: center;
   opacity: 0.8;
   z-index: 0;
+
+  @include tablet {
+    font-size: 97px;
+    width: max-content;
+  }
+  @include mobile {
+    font-size: 40px;
+    line-height: normal;
+    margin: 140px auto 13px auto;
+  }
 }
 
 .coffeeTypeContainer {
   grid-area: coffeeType;
-  display: flex;
-  margin: 200px auto 0px auto;
-  justify-content: space-between;
   z-index: 1;
-  width: inherit;
+  grid-area: 1/2/1/1;
+  @include desktop {
+    display: flex;
+    margin: 200px auto 0px auto;
+    justify-content: space-between;
+
+    width: inherit;
+  }
+  @include tablet {
+    margin: 155px auto;
+  }
+  @include mobile {
+    margin: 205px auto;
+  }
 }
 
 .coffeeType {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 255px;
+  @include desktop {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 255px;
+  }
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 255px;
+    text-align: center;
+  }
 }
 
 .desktopBeanBagPic {
-  width: 253px;
-  height: 193px;
+  @include desktop-tablet {
+    width: 255px;
+    height: 193px;
+  }
+
+  @include tablet {
+    margin-left: 9px;
+  }
+  @include mobile {
+    width: 200px;
+    height: 151px;
+  }
+}
+
+.beanText {
+  @include desktop {
+    text-align: center;
+  }
+  @include tablet {
+    width: 282px;
+    margin: 0px 36px 0px 25px;
+  }
 }
 
 .beanName {
   @include H4-fontDesign;
-  margin-top: 71px;
-  margin-bottom: 8px;
+  @include desktop {
+    margin-top: 71px;
+    margin-bottom: 8px;
+  }
+  @include tablet {
+    margin: 10px 0px 24px 0px;
+  }
+  @include mobile {
+    margin: 24px auto 16px auto;
+  }
 }
 
 .beanDescription {
   @include body-fontDesign;
-  width: inherit;
-  text-align: center;
+  @include desktop {
+    text-align: center;
+  }
+  @include tablet {
+    width: 282px;
+  }
+  @include mobile {
+    margin-bottom: 48px;
+  }
 }
