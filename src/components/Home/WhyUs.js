@@ -15,36 +15,41 @@ export default function WhyUs() {
             src="/mainAssets/assets/home/desktop/icon-coffee-bean.svg"
             alt="bean icon"
           />
-          <h4 className="threeBenefitsTitle">Best quality</h4>
-          <p className="threeBenefitsPara">
-            Discover an endless variety of the world’s best artisan coffee from
-            each of our roasters.
-          </p>
+          <div className="threeBenefitsText">
+            <h4 className="threeBenefitsTitle">Best quality</h4>
+            <p className="threeBenefitsPara">
+              Discover an endless variety of the world’s best artisan coffee
+              from each of our roasters.
+            </p>
+          </div>
         </div>
         <div className="benefitContainer">
           <img
             src="/mainAssets/assets/home/desktop/icon-gift.svg"
             alt="gift icon"
           />
-          <h4 className="threeBenefitsTitle">Exclusive benefits</h4>
-          <p className="threeBenefitsPara">
-            Special offers and swag when you subscribe, including 30% off your
-            first shipment.
-          </p>
+          <div className="threeBenefitsText">
+            <h4 className="threeBenefitsTitle">Exclusive benefits</h4>
+            <p className="threeBenefitsPara">
+              Special offers and swag when you subscribe, including 30% off your
+              first shipment.
+            </p>
+          </div>
         </div>
         <div className="benefitContainer">
           <img
-          id="truckPic"
+            id="truckPic"
             src="/mainAssets/assets/home/desktop/icon-truck.svg"
             alt="bean icon"
           />
-          <h4 className="threeBenefitsTitle">Free shipping</h4>
-          <p className="threeBenefitsPara">
-            We cover the cost and coffee is delivered fast. Peak freshness:
-            guaranteed.
-          </p>
+          <div className="threeBenefitsText">
+            <h4 className="threeBenefitsTitle">Free shipping</h4>
+            <p className="threeBenefitsPara">
+              We cover the cost and coffee is delivered fast. Peak freshness:
+              guaranteed.
+            </p>
+          </div>
         </div>
-       
       </div>
     </div>
   );

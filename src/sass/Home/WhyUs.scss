@@ -3,8 +3,23 @@
 .whyUsContainer {
   display: grid;
   color: var(--lightCream);
-  width: 1280px;
-  margin: 165px auto 0px auto;
+  grid-template-areas:
+    "title"
+    "benefits";
+  @include desktop {
+    width: 1280px;
+    margin: 165px auto 0px auto;
+  }
+  @include tablet {
+    width: 688px;
+    margin: auto;
+    margin-top: 200px;
+  }
+
+  @include mobile {
+    width: 327px;
+    margin: 70px auto 0px auto;
+  }
 }
 
 .titleContainer {
@@ -18,50 +33,137 @@
 
 .whyUsTitle {
   @include H2-fontDesign;
-  margin-top: 100px;
+  @include desktop {
+    margin-top: 100px;
+  }
+  @include tablet {
+    margin-top: 50px;
+    font-size: 32px;
+  }
+  @include mobile {
+    font-size: 28px;
+    line-height: 28px;
+    margin-top: 64px;
+  }
 }
 
 .whyUsPara {
-  @include body-fontDesign;
-  width: 540px;
   margin: auto;
+  @include desktop {
+    @include body-fontDesign;
+    width: 540px;
+  }
+  @include tablet {
+    @include body-fontDesignSmall;
+    width: 540px;
+  }
+  @include mobile {
+    width: 279px;
+    @include body-fontDesignSmall;
+  }
 }
-
 //THREE BENEFIT CONTAINERS
 
 .threeBenefitsContainer {
   grid-area: benefits;
+  grid-area: 1/2/1/1;
   display: flex;
   justify-content: center;
   width: inherit;
-  margin-top: 346px;
-  gap: 30px;
-}
 
+  gap: 30px;
+
+  @include desktop {
+    margin-top: 346px;
+  }
+  @include tablet {
+    flex-direction: column;
+    margin-top: 280px;
+  }
+  @include mobile {
+    flex-direction: column;
+    margin: 305px auto 0px auto;
+    align-items: center;
+  }
+
+  img {
+    @include tablet {
+      height: 56px;
+      width: auto;
+      margin: 0px 55px 0px 70px;
+    }
+    @include mobile {
+      margin-top: 72px;
+    }
+  }
+}
 .benefitContainer {
   display: flex;
-  flex-direction: column;
-  background-color: var(--darkCyan);
-  width: 350px;
-  height: 382px;
+
   border-radius: 10px;
+  background-color: var(--darkCyan);
   align-items: center;
-  padding: 72px 48px 48px 48px;
-  text-align: center;
+  @include desktop {
+    width: 350px;
+    height: 382px;
+    flex-direction: column;
+    text-align: center;
+
+    padding: 72px 48px 48px 48px;
+  }
+  @include tablet {
+    width: 573px;
+    height: 180px;
+    margin: 0px 58px;
+  }
+  @include mobile {
+    width: 279px;
+    height: 382px;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 #truckPic {
-  margin-top: 22px;
+  @include desktop {
+    margin-top: 22px;
+  }
+}
+
+.threeBenefitsText {
+  align-self: center;
 }
 
 .threeBenefitsTitle {
-  margin-top: 56px;
+  @include desktop {
+    margin-top: 56px;
+    margin-bottom: 0px;
+  }
   @include H4-fontDesign;
-  margin-bottom: 8px;
+
+  @include tablet {
+    margin: 0px;
+    font-size: 24px;
+  }
+
+  @include mobile {
+    margin: 56px auto 24px auto;
+    font-size: 24px;
+  }
 }
 
 .threeBenefitsPara {
   margin-bottom: 0px;
+  @include desktop {
+    @include body-fontDesign;
+  }
+  @include tablet {
+    width: 344px;
+    @include body-fontDesignSmall;
+  }
 
-  @include body-fontDesign;
+  @include mobile {
+    width: 212px;
+    @include body-fontDesignSmall;
+  }
 }
