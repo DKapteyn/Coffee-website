@@ -14,7 +14,7 @@ export default function HowDoYouDrink() {
     setOpenModal(!openModal);
   }
   return (
-    <div HowDoYouDrink--Container>
+    <div>
       <Options
         MainTitle="How do you drink your coffee?"
         option1Title="Capsule"

@@ -1,30 +1,51 @@
 @use "../Mixins.scss" as *;
 
+.HIWContainer {
+  @include tablet {
+    margin-left: 39px;
+  }
+  @include mobile {
+    width: 269px;
+    margin: 120px auto 0px auto;
+  }
+}
+
 .HIWTitle {
   @include H4-fontDesign;
   color: var(--grey);
+  @include mobile {
+    display: grid;
+    justify-content: center;
+  }
 }
 
 .HIWSectionContainer {
   display: flex;
-  justify-content: center;
-  gap: 95px;
-  margin-right: 70px;
-}
 
-.HIWNumber {
-  @include H1-fontDesign;
-  color: var(--paleOrange);
-}
-
-.HIWSection {
-  width: 285px;
+  @include desktop {
+    gap: 95px;
+    margin-right: 70px;
+    justify-content: center;
+  }
+  @include tablet {
+    gap: 10px;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .HIWCircles {
   display: flex;
-
-  gap: 351px;
+  @include desktop {
+    gap: 351px;
+  }
+  @include tablet {
+    gap: 204px;
+  }
+  @include mobile {
+    display: none;
+  }
 }
 
 .HIWCircle {
@@ -41,17 +62,62 @@
   width: 760px;
   align-self: center;
   position: absolute;
-  margin-left: 15px;
+
   z-index: 0;
+  @include desktop {
+    width: 760px;
+    margin-left: 15px;
+  }
+  @include tablet {
+    width: 467px;
+  }
+}
+
+.HIWNumber {
+  @include H1-fontDesign;
+  color: var(--paleOrange);
+  @include mobile {
+    margin: 56px auto 6px auto;
+  }
+}
+
+.HIWSection {
+  @include desktop {
+    width: 285px;
+  }
+  @include tablet {
+    width: 223px;
+  }
+  @include mobile {
+    display: grid;
+    justify-items: center;
+  }
 }
 
 .HIWSectionTitle {
-  @include H3-fontDesign;
   color: var(--darkGreyBlue);
+
+  @include desktop {
+    @include H3-fontDesign;
+  }
+  @include tablet {
+    @include H3-fontDesignSmall;
+  }
 }
 
 .HIWPara {
-  @include body-fontDesign;
   color: var(--darkGreyBlue);
-  margin-bottom: 64px;
+
+  @include desktop {
+    @include body-fontDesign;
+    margin-bottom: 64px;
+  }
+  @include tablet {
+    @include body-fontDesignSmall;
+    margin-bottom: 64px;
+  }
+  @include mobile {
+    text-align: center;
+    margin-bottom: 0px;
+  }
 }

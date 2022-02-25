@@ -23,7 +23,7 @@ export default function HomePage() {
       <WhyUs />
       <div className="HIWButton--Container">
         <HowItWorksTemplate classPrefix={"HIW"} />
-        <Button style={{ marginBottom: "200px" }} />
+        <Button secondClass="homeButton" />
       </div>
     </div>
   );

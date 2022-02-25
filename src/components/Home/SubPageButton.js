@@ -1,16 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
-export default function SubPageButton({ style }) {
+export default function SubPageButton({ secondClass }) {
   const navigate = useNavigate();
 
   function navSubscribe() {
     navigate("/Subscribe");
   }
   return (
-    <div style={style}>
-      <button onClick={navSubscribe} className="Button">
-        Create your plan
-      </button>
-    </div>
+    <button onClick={navSubscribe} className={`Button ${secondClass}`}>
+      Create your plan
+    </button>
   );
 }

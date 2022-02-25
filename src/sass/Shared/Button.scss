@@ -1,3 +1,5 @@
+@use "../Mixins.scss" as *;
+
 .Button {
   background-color: var(--darkCyan);
   width: 217px;
@@ -24,4 +26,28 @@
   border-radius: 7px;
   border: none;
   cursor: pointer;
+}
+
+// button on the home page
+
+.homeButton {
+  margin-bottom: 200px;
+  @include tablet {
+    margin-left: 39px;
+  }
+  @include mobile {
+    margin: 79px auto 120px auto;
+  }
+}
+
+.HIWButton--Container {
+  @include desktop {
+    width: 1110px;
+    margin: 200px auto 0px auto;
+  }
+  @include mobile {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+  }
 }

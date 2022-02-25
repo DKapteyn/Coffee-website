@@ -5,11 +5,13 @@
 .Nav--links {
   display: flex;
   gap: 33px;
+  align-items: center;
 
   a {
     text-decoration: none;
     color: var(--grey);
     @include navMenu-fontDesign;
+    margin-top: 5px;
   }
 }
 
