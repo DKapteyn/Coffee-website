@@ -9,7 +9,7 @@ import { useState, useEffect, createContext } from "react";
 export const widthContext = createContext("");
 
 window.$tabletWidth = 800;
-window.$mobileWidth = 400;
+window.$mobileWidth = 580;
 
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);

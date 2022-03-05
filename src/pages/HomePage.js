@@ -23,7 +23,9 @@ export default function HomePage() {
       <WhyUs />
       <div className="HIWButton--Container">
         <HowItWorksTemplate classPrefix={"HIW"} />
-        <Button secondClass="homeButton" />
+        <div className="Button--Container">
+          <Button secondClass="homeButton" />
+        </div>
       </div>
     </div>
   );

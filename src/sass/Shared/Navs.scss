@@ -3,10 +3,14 @@
 //Both NAV
 
 .Nav--links {
-  display: flex;
-  gap: 33px;
-  align-items: center;
-
+  @include desktop-tablet {
+    display: flex;
+    gap: 33px;
+    align-items: center;
+  }
+  @include mobile {
+    display: none;
+  }
   a {
     text-decoration: none;
     color: var(--grey);
@@ -20,7 +24,7 @@
 .TopNav--container {
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
   max-width: 1280px;
 
   @include desktop {
@@ -28,6 +32,12 @@
   }
   @media (max-width: 1345px) {
     margin: 40px;
+  }
+}
+
+.TopNav--hamburger {
+  @include desktop-tablet {
+    display: none;
   }
 }
 

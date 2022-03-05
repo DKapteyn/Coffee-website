@@ -9,6 +9,11 @@ export default function TopNav() {
         <Link to="About">About Us</Link>
         <Link to="Subscribe">Create Your Plan</Link>
       </div>
+      <img
+        className="TopNav--hamburger"
+        src="\mainAssets\assets\shared\mobile\icon-hamburger.svg"
+        alt="hamburger icon"
+      />
     </div>
   );
 }

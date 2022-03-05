@@ -45,9 +45,12 @@
     width: 1110px;
     margin: 200px auto 0px auto;
   }
+}
+
+.Button--Container {
   @include mobile {
+    width: 100%;
     display: grid;
     justify-content: center;
-    margin: auto;
   }
 }
