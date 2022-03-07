@@ -35,7 +35,7 @@ export default function TopNav() {
       )}
 
       {(width > mobile || dropDown === true) && (
-        <div className="Nav--links">
+        <div className="Nav--linksTop">
           <Link to="Home">Home</Link>
           <Link to="About">About Us</Link>
           <Link to="Subscribe">Create Your Plan</Link>

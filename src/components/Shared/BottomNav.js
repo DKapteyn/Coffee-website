@@ -9,7 +9,7 @@ export default function BottomNav() {
         <Icon fill="white" />
 
         {/* SVG ADDED AS REACT COMPONENT SO NOT TO POLLUTE THE FILE. FILE WAS ALSO COPIED TO SRC SO THAT IT COULD BE IMPORTED AS A REACT FUNCTION  */}
-        <div className="Nav--links">
+        <div className="Nav--linksBottom">
           <Link to="Home">Home</Link>
           <Link to="About">About Us</Link>
           <Link to="Subscribe">Create Your Plan</Link>
