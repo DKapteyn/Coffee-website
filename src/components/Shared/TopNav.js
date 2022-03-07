@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { widthContext } from "../../App";
 
 export default function TopNav() {
@@ -9,9 +9,21 @@ export default function TopNav() {
   const mobile = window.$mobileWidth;
 
   const [dropDown, setDropDown] = useState(false);
+
+  //If width gets larger than mobile dropDown State changes to false
+  useEffect(() => {
+    if (width > mobile) {
+      setDropDown(false);
+    }
+  }, [width, mobile]);
+
   return (
     <div className="TopNav--container">
-      <img src="/mainAssets/assets/shared/desktop/logo.svg" alt="Log" />
+      <img
+        className="TopNav--logo"
+        src="/mainAssets/assets/shared/desktop/logo.svg"
+        alt="Logo"
+      />
 
       {/* conditionally rendered if screen is larger than mobile or 
      the state of dropdown is true(changed by clicking the hamburger menu) */}
@@ -35,10 +47,12 @@ export default function TopNav() {
       )}
 
       {(width > mobile || dropDown === true) && (
-        <div className="Nav--linksTop">
-          <Link to="Home">Home</Link>
-          <Link to="About">About Us</Link>
-          <Link to="Subscribe">Create Your Plan</Link>
+        <div className="TopNav-dropDownOverFlow">
+          <div className="Nav--linksTop">
+            <Link to="Home">Home</Link>
+            <Link to="About">About Us</Link>
+            <Link to="Subscribe">Create Your Plan</Link>
+          </div>
         </div>
       )}
     </div>

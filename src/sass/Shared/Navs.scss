@@ -1,4 +1,4 @@
-@import "../Mixins.scss";
+@use "../Mixins.scss" as *;
 
 //Both NAV
 
@@ -13,22 +13,42 @@
     position: absolute;
     flex-direction: column;
     background-color: white;
+
     display: flex;
     top: 30px;
     z-index: 3;
     width: 100%;
     text-align: center;
+    gap: 32px;
+    padding: 65px 0px;
+    box-shadow: 0px 20px 20px white;
   }
 
   a {
     text-decoration: none;
-    color: var(--grey);
-    @include navMenu-fontDesign;
-    margin-top: 5px;
+    @include desktop-tablet {
+      color: var(--grey);
+      @include navMenu-fontDesign;
+      margin-top: 5px;
+    }
+    @include mobile {
+      @include H4-fontDesign;
+      color: var(--darkGreyBlue);
+      width: 100%;
+    }
   }
 }
 
-//TOP NAV
+.TopNav-dropDownOverFlow {
+  @include mobile {
+    position: absolute;
+    top: 30px;
+    height: 90vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 100;
+  }
+}
 
 .TopNav--container {
   display: flex;
@@ -46,6 +66,13 @@
   @include mobile {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 40px 0px;
+  }
+}
+
+.TopNav--logo {
+  @include mobile {
+    margin-left: 40px;
   }
 }
 
@@ -55,6 +82,7 @@
   }
   @include mobile {
     justify-self: flex-end;
+    margin-right: 40px;
   }
 }
 
