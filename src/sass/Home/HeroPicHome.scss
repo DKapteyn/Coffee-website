@@ -3,6 +3,7 @@
 .home--heroPicContainer {
   display: grid;
   width: 100%;
+  position: relative;
   @include tablet-mobile {
     justify-self: center;
     justify-content: center;

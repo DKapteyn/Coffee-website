@@ -9,8 +9,13 @@
     align-items: center;
   }
   @include mobile {
-    display: none;
+    //grid-area: 2/1 / 2 / span 2;
+    position: absolute;
+    flex-direction: column;
+    background-color: white;
+    display: flex;
   }
+
   a {
     text-decoration: none;
     color: var(--grey);
@@ -26,6 +31,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1280px;
+  position: relative;
 
   @include desktop {
     margin: 40px auto;
@@ -33,11 +39,18 @@
   @media (max-width: 1345px) {
     margin: 40px;
   }
+  @include mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .TopNav--hamburger {
   @include desktop-tablet {
     display: none;
+  }
+  @include mobile {
+    justify-self: flex-end;
   }
 }
 
