@@ -3,18 +3,18 @@
 .OurCommitment--Container {
   display: grid;
   width: 1110px;
-  grid-template-areas: "thisImage thisText";
+  //grid-template-areas: "thisImage thisText";
   gap: 125px;
   margin: 168px auto 0px auto;
 }
 
 .OurCommitment--image {
-  grid-area: thisImage;
+  grid-area: 1/1/1/2;
   border-radius: 10px;
 }
 
 .OurCommitment--text {
-  grid-area: thisText;
+  grid-area: 1/2/2/2;
   display: flex;
   flex-direction: column;
   justify-content: center;

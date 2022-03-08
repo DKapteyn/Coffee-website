@@ -2,25 +2,78 @@
 
 .AboutUs--Container {
   display: grid;
+  margin: auto;
+  grid-template-columns: 1fr;
+  @include desktop {
+    width: 1280px;
+  }
+  @include tablet {
+    width: 689px;
+  }
+  @include mobile {
+    width: 327px;
+  }
 }
 
 .AboutUs--heroPic {
-  grid-area: AboutUsHeroPic;
+  grid-area: 1/1/2/2;
   border-radius: 10px;
+  margin: auto;
+  z-index: 0;
+  @include tablet {
+    height: 400px;
+    width: 689px;
+  }
+  @include mobile {
+    height: 400px;
+    width: 327px;
+  }
 }
 
 .AboutUs--heroPicText {
-  grid-area: AboutUSHeroPicText;
+  grid-area: 1/1/2/2;
   color: var(--lightCream);
-  width: 445px;
-  margin: 137px 85px;
+  z-index: 2;
+  @include desktop {
+    width: 445px;
+    margin: 137px 85px;
+  }
+  @include tablet {
+    margin: 118px 233px 118px 58px;
+  }
+
+  @include mobile {
+    text-align: center;
+  }
 }
 
 .AboutUs--title {
-  @include H2-fontDesign;
-  margin-bottom: 24px;
-  margin-top: 0px;
+  @include desktop {
+    @include H2-fontDesign;
+    margin-bottom: 24px;
+    margin-top: 0px;
+  }
+  @include tablet {
+    @include H3-fontDesign;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+  @include mobile {
+    @include H3-fontDesignSmall;
+    line-height: 28px;
+    margin: 110px auto 24px auto;
+  }
 }
 .AboutUs--para {
-  @include body-fontDesign;
+  @include desktop {
+    @include body-fontDesign;
+  }
+  @include tablet-mobile {
+    @include body-fontDesignSmall;
+  }
+
+  @include mobile {
+    width: 279px;
+    margin: auto;
+  }
 }
