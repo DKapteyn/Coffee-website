@@ -1,30 +1,57 @@
 @use "../Mixins.scss" as *;
 
 .OurCommitment--Container {
-  display: grid;
-  width: 1110px;
-  //grid-template-areas: "thisImage thisText";
-  gap: 125px;
-  margin: 168px auto 0px auto;
+  display: flex;
+
+  @include desktop {
+    width: 1110px;
+    gap: 125px;
+    margin: 168px auto 0px auto;
+  }
+  @include tablet {
+    width: 688px;
+    gap: 69px;
+    margin: 144px auto 0px auto;
+  }
+  @include mobile {
+    flex-direction: column;
+    width: 327px;
+    margin: 120px auto 0px auto;
+    gap: 48px;
+  }
 }
 
 .OurCommitment--image {
-  grid-area: 1/1/1/2;
   border-radius: 10px;
 }
 
 .OurCommitment--text {
-  grid-area: 1/2/2/2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include mobile {
+    text-align: center;
+  }
 }
 
 .OurCommitment--title {
-  @include H2-fontDesign;
-  margin-bottom: 32px;
+  @include desktop {
+    @include H2-fontDesign;
+    margin-bottom: 32px;
+  }
+  @include tablet-mobile {
+    @include H3-fontDesign;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
 }
 
 .OurCommitment--para {
-  @include body-fontDesign;
+  @include desktop {
+    @include body-fontDesign;
+  }
+  @include tablet-mobile {
+    @include body-fontDesignSmall;
+    width: 339px;
+  }
 }

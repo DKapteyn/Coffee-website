@@ -47,7 +47,10 @@ export default function TopNav() {
       )}
 
       {(width > mobile || dropDown === true) && (
-        <div className="TopNav-dropDownOverFlow">
+        <div
+          className="TopNav-dropDownOverFlow"
+          onClick={() => setDropDown(false)}
+        >
           <div className="Nav--linksTop">
             <Link to="Home">Home</Link>
             <Link to="About">About Us</Link>

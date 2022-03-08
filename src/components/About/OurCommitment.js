@@ -1,13 +1,38 @@
-import React from "react";
+import { widthContext } from "../../App.js";
+import { useContext } from "react";
 
 export default function OurCommitment() {
+  const width = useContext(widthContext);
+  //width constants are in the App.js
+  const mobile = window.$mobileWidth;
+  const tablet = window.$tabletWidth;
+
   return (
     <div className="OurCommitment--Container">
-      <img
-        className="OurCommitment--image"
-        src="/mainAssets/assets/about/desktop/image-commitment.jpg"
-        alt="Barista"
-      />
+      {
+        //Destop Image
+        width > tablet ? (
+          <img
+            className="OurCommitment--image"
+            src="/mainAssets/assets/about/desktop/image-commitment.jpg"
+            alt="Barista"
+          />
+        ) : //Tablet Image
+        width > mobile ? (
+          <img
+            className="OurCommitment--image"
+            src="/mainAssets/assets/about/tablet/image-commitment.jpg"
+            alt="Barista"
+          />
+        ) : (
+          //Mobile Image
+          <img
+            className="OurCommitment--image"
+            src="/mainAssets/assets/about/mobile/image-commitment.jpg"
+            alt="Barista"
+          />
+        )
+      }
       <div className="OurCommitment--text">
         <div className="OurCommitment--title">Our commitment</div>
         <div className="OurCommitment--para">
