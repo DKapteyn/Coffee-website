@@ -90,18 +90,28 @@
 .BottomNav--container {
   display: flex;
   background-color: var(--backgroundGrey);
-  height: 120px;
-  width: 1280px;
+  min-height: 120px;
+  max-width: 1280px;
   align-items: center;
   justify-content: space-between;
   margin: 0px auto 88px auto;
   padding: 47px 85px;
+  @include tablet-mobile {
+    flex-direction: column;
+  }
 }
 .Nav--linksBottom {
+  display: flex;
+
   @include desktop-tablet {
-    display: flex;
     gap: 33px;
     align-items: center;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin: 48px auto;
+    gap: 24px;
   }
 
   a {
@@ -109,6 +119,14 @@
     color: var(--grey);
     @include navMenu-fontDesign;
     margin-top: 5px;
+    @include tablet {
+      margin-top: 32px;
+      margin-bottom: 65px;
+    }
+    @include mobile {
+      text-align: center;
+      margin-top: 0px;
+    }
   }
 }
 
@@ -125,5 +143,5 @@
 .BottomNav--socialMedia {
   display: flex;
   gap: 24px;
-  margin-left: 200px;
+  justify-self: flex-end;
 }

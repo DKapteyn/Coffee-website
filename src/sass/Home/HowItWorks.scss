@@ -104,6 +104,8 @@
   }
   @include tablet-mobile {
     @include H3-fontDesignSmall;
+  }
+  @include mobile {
     width: max-content;
   }
 }
