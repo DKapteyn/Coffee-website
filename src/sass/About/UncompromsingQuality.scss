@@ -2,32 +2,92 @@
 
 .UncompromisingQuality--Container {
   display: flex;
-  background-image: url("bg-quality.png");
+
   background-repeat: no-repeat;
-  margin: 244px auto 0px auto;
+
   width: 1280px;
   height: 474px;
   position: relative;
+  border-radius: 10px;
+  @include desktop {
+    background-image: url("bg-quality-desktop.png");
+    width: 1280px;
+    height: 474px;
+    margin: 244px auto 0px auto;
+  }
+  @include tablet {
+    background-image: url("bg-quality-tablet.png");
+    width: 688px;
+    height: 488px;
+
+    margin: 304px auto 0px auto;
+  }
+  @include mobile {
+    background-image: url("bg-quality-mobile.png");
+    width: 327px;
+    height: 509px;
+    margin: 198px auto 0px auto;
+  }
 }
 
 .UncompromisingQuality--text {
-  width: 540px;
   color: var(--lightCream);
-  margin: 88px 0px 0px 85px;
+  @include desktop {
+    margin: 88px 0px 0px 85px;
+    width: 540px;
+  }
+  @include tablet {
+    text-align: center;
+    width: 540px;
+    margin: 220px auto 0px auto;
+  }
+  @include mobile {
+    text-align: center;
+    width: 279px;
+    margin: 140px auto 0px auto;
+  }
 }
 
 .UncompromisingQuality--title {
-  @include H2-fontDesign;
-  margin-bottom: 32px;
+  @include desktop {
+    @include H2-fontDesign;
+    margin-bottom: 32px;
+  }
+  @include tablet {
+    @include H2-fontDesignSmall;
+    margin-bottom: 24px;
+  }
+  @include mobile {
+    @include H3-fontDesignSmall;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
 }
 
 .UncompromisingQuality--para {
-  @include body-fontDesign;
+  @include desktop {
+    @include body-fontDesign;
+  }
+  @include tablet-mobile {
+    @include body-fontDesignSmall;
+  }
 }
 
 .UncompromisingQuality--img {
   border-radius: 10px;
   position: absolute;
-  right: 85px;
-  bottom: 88px;
+  @include desktop {
+    right: 85px;
+    bottom: 88px;
+  }
+  @include tablet {
+    bottom: 328px;
+    right: 57px;
+  }
+  @include mobile {
+    width: 279px;
+    height: 156px;
+    bottom: 431px;
+    right: 24px;
+  }
 }

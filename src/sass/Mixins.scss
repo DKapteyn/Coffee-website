@@ -19,6 +19,13 @@
   font-family: "Fraunces", serif;
 }
 
+@mixin H2-fontDesignSmall {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 900;
+  font-family: "Fraunces", serif;
+}
+
 @mixin H3-fontDesign {
   font-size: 32px;
   line-height: 36px;

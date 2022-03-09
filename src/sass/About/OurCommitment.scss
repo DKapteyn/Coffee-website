@@ -40,8 +40,7 @@
     margin-bottom: 32px;
   }
   @include tablet-mobile {
-    @include H3-fontDesign;
-    line-height: 48px;
+    @include H2-fontDesignSmall;
     margin-bottom: 30px;
   }
 }

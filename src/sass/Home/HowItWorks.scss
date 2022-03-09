@@ -2,7 +2,8 @@
 
 .HIWContainer {
   @include tablet {
-    margin-left: 39px;
+    width: 689px;
+    margin: 160px auto 0px auto;
   }
   @include mobile {
     width: 327px;

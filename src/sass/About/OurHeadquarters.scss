@@ -1,24 +1,56 @@
 @use "../Mixins.scss" as *;
 
-.OurHeadquarters--LocationContainer {
-  display: flex;
-  justify-content: center;
-  gap: 95px;
-  margin-bottom: 168px;
+.OurHeadquarters--Container {
+  @include desktop {
+    margin: 168px auto;
+    width: 1045px;
+  }
+  @include tablet {
+    width: 688px;
+    margin: 144px auto;
+  }
+  @include mobile {
+    width: 223px;
+    margin: 120px auto;
+  }
 }
 
 .OurHeadquarters--mainTitle {
   @include H4-fontDesign;
   color: var(--grey);
-  margin: 168px auto 72px auto;
-  width: 1045px;
+  width: 100%;
+  margin: 0px auto 72px auto;
+}
+
+//container for addresses under the main title
+.OurHeadquarters--LocationContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto 168px auto;
+  width: 100%;
+
+  @include desktop {
+    gap: 95px;
+  }
+  @include mobile {
+    flex-direction: column;
+    width: 223px;
+    margin: 120px auto;
+    text-align: center;
+    gap: 80px;
+  }
 }
 
 .OurHeadquarters--title {
-  @include H3-fontDesign;
   color: var(--darkGreyBlue);
+  @include desktop {
+    @include H3-fontDesign;
+  }
+  @include tablet-mobile {
+    @include H4-fontDesign;
+    line-height: 36px;
+  }
 }
-
 .australiaPic {
   margin-bottom: 50px;
 }
@@ -32,8 +64,13 @@
 }
 
 .address {
-  @include body-fontDesign;
   list-style-type: none;
   padding-left: 0px;
-  width: 285px;
+  @include body-fontDesign;
+  @include desktop {
+    width: 285px;
+  }
+  @include tablet {
+    width: 223px;
+  }
 }

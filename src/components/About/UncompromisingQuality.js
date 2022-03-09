@@ -1,4 +1,11 @@
+import { widthContext } from "../../App";
+import { useContext } from "react";
+
 export default function UncompromisingQuality() {
+  const width = useContext(widthContext);
+  //global variables in App.js
+  const tablet = window.$tabletWidth;
+  const mobile = window.$mobileWidth;
   return (
     <div className="UncompromisingQuality--Container">
       <div className="UncompromisingQuality--text">
@@ -14,11 +21,28 @@ export default function UncompromisingQuality() {
           and enjoyable.
         </div>
       </div>
-      <img
-        src="/mainAssets/assets/about/desktop/image-quality.jpg"
-        alt="latte"
-        className="UncompromisingQuality--img"
-      />
+      {
+        //desktop Image
+        width > tablet ? (
+          <img
+            src="/mainAssets/assets/about/desktop/image-quality.jpg"
+            alt="latte"
+            className="UncompromisingQuality--img"
+          /> //tablet Image
+        ) : width > mobile ? (
+          <img
+            src="/mainAssets/assets/about/tablet/image-quality.jpg"
+            alt="latte"
+            className="UncompromisingQuality--img"
+          /> // mobile Image
+        ) : (
+          <img
+            src="/mainAssets/assets/about/mobile/image-quality.jpg"
+            alt="latte"
+            className="UncompromisingQuality--img"
+          />
+        )
+      }
     </div>
   );
 }

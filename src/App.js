@@ -8,7 +8,7 @@ import BottomNav from "./components/Shared/BottomNav";
 import { useState, useEffect, createContext } from "react";
 export const widthContext = createContext("");
 
-window.$tabletWidth = 800;
+window.$tabletWidth = 820;
 window.$mobileWidth = 580;
 
 function useWindowWidth() {
