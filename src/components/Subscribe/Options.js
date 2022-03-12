@@ -3,6 +3,7 @@ import { summaryContext } from "../../pages/SubscribePage";
 
 export default function Options(props) {
   const [dropDown, setDropDown] = useState(false);
+  const { summary } = useContext(summaryContext);
 
   //Changes class to update the color of the option
   const [clickedColor, setClickedColor] = useState({
@@ -32,10 +33,24 @@ export default function Options(props) {
 
   //CONTROLS OPTIONS DROPDOWN OPENING AND CLOSING AND TURNING ARROW IMAGE.
   function ChangeDropDown() {
-    setDropDown((prevState) => (prevState === false ? true : false));
+    setDropDown(!dropDown);
   }
 
-  return (
+  return summary.grindNeed === false &&
+    props.MainTitle === "Want us to grind them?" ? (
+    <div className="Options--Container">
+      <div className="Options--Container">
+        <div className="Options--falseMainTitleContainer">
+          <h2 className="Options--MainTitle">{props.MainTitle}</h2>
+          <img
+            className="Options--Arrow"
+            src="/mainAssets/assets/plan/desktop/icon-arrow.svg"
+            alt="arrow"
+          />
+        </div>
+      </div>
+    </div>
+  ) : (
     <div className="Options--Container">
       <div className="Options--Container">
         <div onClick={ChangeDropDown} className="Options--MainTitleContainer">
