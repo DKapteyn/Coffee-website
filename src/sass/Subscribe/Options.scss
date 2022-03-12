@@ -1,13 +1,44 @@
 @use "../Mixins.scss" as *;
 
-.Options--Container {
-  width: 730px;
+//Container for PlanList, Options and Button
+.PlanandHowDo--Container {
+  display: flex;
+  @include desktop {
+    margin: 126px auto 0px auto;
+    width: 1195px;
+    justify-content: space-between;
+  }
+  @include tablet-mobile {
+    justify-content: center;
+  }
 }
 
+.Options--Container {
+  @include desktop-tablet {
+    width: 730px;
+  }
+  @include mobile {
+    width: 328px;
+    margin: auto;
+    margin: 78px 0px;
+  }
+}
 .Options--MainTitleContainer {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
+  @include desktop-tablet {
+    align-items: center;
+  }
+  @include mobile {
+    align-items: flex-start;
+  }
+}
+
+.Options--Arrow {
+  @include mobile {
+    margin-top: 8px;
+  }
 }
 
 .Options--falseMainTitleContainer {
@@ -18,22 +49,55 @@
 }
 
 .Options--MainTitle {
-  margin-right: 79.5px;
-  @include H2-fontDesign;
   color: var(--grey);
+  @include desktop {
+    margin-right: 79.5px;
+    @include H2-fontDesign;
+  }
+  @include tablet-mobile {
+    @include H2-fontDesignSmall;
+    // margin: 100px auto 40px auto;
+  }
+  @include mobile {
+    margin-top: 0px;
+    margin-bottom: 32px;
+    @include H4-fontDesign;
+    line-height: 28px;
+    width: 240px;
+  }
 }
 
 .Options--DropDownList {
   display: flex;
-  gap: 23px;
+  @include desktop {
+    gap: 23px;
+  }
+  @include tablet {
+    gap: 10px;
+    justify-content: center;
+  }
+  @include mobile {
+    gap: 16px;
+    flex-direction: column;
+  }
 }
-
 .Options--DropDownItem {
-  width: 228px;
-  height: 250px;
-  padding: 32px 28px 84px 28px;
-
   border-radius: var(--borderRadius);
+
+  @include desktop-tablet {
+    height: 250px;
+    padding: 32px 28px 84px 28px;
+  }
+  @include desktop {
+    width: 228px;
+  }
+  @include tablet {
+    width: 223px;
+  }
+  @include mobile {
+    width: 328px;
+    padding: 24px;
+  }
 
   &:hover {
     background-color: var(--paleOrange);
@@ -52,10 +116,19 @@
 .Options--SubTitle {
   @include H4-fontDesign;
   margin-top: 0px;
-  margin-bottom: 24px;
+
   width: max-content;
+  @include desktop-tablet {
+    margin-bottom: 24px;
+  }
+  @include mobile {
+    margin-bottom: 8px;
+  }
 }
 
 .Options--Para {
   @include body-fontDesign;
+  @include mobile {
+    margin: 0px;
+  }
 }

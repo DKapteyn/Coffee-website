@@ -1,13 +1,23 @@
 @use "../Mixins.scss" as *;
 
 .orderSummary--Container {
-  width: 730px;
-  height: 208px;
-  padding: 27px 64px;
   color: var(--lightCream);
   background-color: var(--darkGreyBlue);
   border-radius: var(--borderRadius);
-  margin-top: 88px;
+  @include desktop-tablet {
+    width: 730px;
+    height: 208px;
+    padding: 27px 64px;
+
+    margin-top: 88px;
+  }
+  @include mobile {
+    height: 274px;
+    width: 328px;
+
+    padding: 32px 24px;
+    margin-top: 88px;
+  }
 }
 
 .orderSummary--title {
@@ -18,11 +28,16 @@
 
 .orderSummary--para {
   @include H4-fontDesign;
-  line-height: 40px;
-  width: 602px;
-  margin: 0px;
+  @include desktop-tablet {
+    line-height: 40px;
+    width: 602px;
+    margin: 0px;
+  }
+  @include mobile {
+    width: 279px;
+    margin: 0px;
+  }
 }
-
 .summaryObject {
   color: var(--darkCyan);
 }

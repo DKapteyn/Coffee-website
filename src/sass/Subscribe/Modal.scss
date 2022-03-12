@@ -16,10 +16,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  width: 540px;
   height: 597px;
   background-color: var(--lightCream);
   border-radius: var(--borderRadius);
+  @include desktop-tablet {
+    width: 540px;
+  }
+  @include mobile {
+    width: 327px;
+  }
 }
 
 .ModalorderSummary--title {
@@ -29,39 +34,68 @@
 .Modal--titleContainer {
   display: grid;
   color: var(--lightCream);
-  height: 136px;
-  width: inherit;
+
   background-color: var(--darkGreyBlue);
-  place-content: center;
+
   border-top-left-radius: var(--borderRadius);
   border-top-right-radius: var(--borderRadius);
+  width: inherit;
+  @include desktop-tablet {
+    place-content: center;
+    height: 136px;
+  }
+  @include mobile {
+    padding: 28px 68px 28px 24px;
+    height: 88px;
+  }
 }
 
 .Modal--title {
-  @include H2-fontDesign;
+  @include desktop-tablet {
+    @include H2-fontDesign;
+  }
+  @include mobile {
+    @include H3-fontDesignSmall;
+  }
 }
 .ModalorderSummary--para {
   @include H4-fontDesign;
+  line-height: 40px;
   color: var(--grey);
-  width: 428px;
-  height: 160px;
 
-  margin: 57px auto 7px auto;
+  @include desktop-tablet {
+    margin: 57px auto 7px auto;
+    height: 160px;
+    width: 428px;
+  }
+  @include mobile {
+    width: 279px;
+    margin: 40px auto 0px auto;
+  }
 }
 
 .Modal--para {
   @include body-fontDesign;
   margin: auto;
-  width: 428px;
+  @include desktop-tablet {
+    width: 428px;
+    @include body-fontDesign;
+  }
+  @include mobile {
+    width: 279px;
+    @include body-fontDesignSmall;
+  }
 }
-
 .Modal--totalAndButtonContainer {
   display: flex;
-  justify-content: space-between;
-  height: 56px;
-  width: 428px;
-  margin: 47px auto 0px auto;
+
   align-items: center;
+  @include desktop-tablet {
+    height: 56px;
+    width: 428px;
+    margin: 47px auto 0px auto;
+    justify-content: space-between;
+  }
 }
 
 .Modal--monthTotal {

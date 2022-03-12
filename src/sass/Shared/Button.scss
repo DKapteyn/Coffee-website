@@ -54,3 +54,28 @@
     justify-content: center;
   }
 }
+.myPlanButton {
+  display: flex;
+  margin-top: 55px;
+
+  @include desktop {
+    justify-content: flex-end;
+    margin-bottom: 168px;
+  }
+  @include tablet-mobile {
+    justify-content: center;
+  }
+  @include tablet {
+    margin-bottom: 144px;
+  }
+  @include mobile {
+    margin-bottom: 120px;
+  }
+}
+
+.modalButton {
+  @include mobile {
+    width: 279px;
+    margin: 24px;
+  }
+}

@@ -51,11 +51,11 @@ export default function TopNav() {
           className="TopNav-dropDownOverFlow"
           onClick={() => setDropDown(false)}
         >
-          <div className="Nav--linksTop">
+          <nav className="Nav--linksTop">
             <Link to="Home">Home</Link>
             <Link to="About">About Us</Link>
             <Link to="Subscribe">Create Your Plan</Link>
-          </div>
+          </nav>
         </div>
       )}
     </div>

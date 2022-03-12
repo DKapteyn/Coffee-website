@@ -3,24 +3,70 @@
 .CreatePlan--Container {
   display: grid;
   color: var(--lightCream);
+  margin: auto;
+  @include desktop {
+    width: 1280px;
+    height: 450px;
+  }
+  @include tablet {
+    width: 689px;
+    height: 400px;
+  }
+  @include mobile {
+    width: 327px;
+    height: 400px;
+  }
 }
 
 .CreatePlan--heroPic {
-  grid-area: heroPic;
+  grid-area: 1/1/2/2;
   border-radius: 10px;
+  @include tablet-mobile {
+    height: 400px;
+  }
+  @include tablet-mobile {
+    width: inherit;
+  }
 }
 
 .CreatePlan--text {
-  grid-area: text;
-  padding: 134px 84px;
+  grid-area: 1/1/2/1;
+  @include desktop {
+    padding: 134px 84px;
+  }
+  @include tablet {
+    padding: 127px 233px 126px 58px;
+  }
+  @include mobile {
+    padding: 101px 24px 126px 24px;
+    text-align: center;
+  }
 }
 
 .CreatePlan--title {
-  @include H1-fontDesign;
-  margin-bottom: 32px;
+  @include desktop {
+    @include H1-fontDesign;
+    margin-bottom: 32px;
+  }
+  @include tablet-mobile {
+    @include H2-fontDesign;
+  }
+  @include tablet {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  @include mobile {
+    line-height: 40px;
+    margin-bottom: 22px;
+  }
 }
 
 .CreatePlan--para {
-  @include body-fontDesign;
-  width: 445px;
+  @include desktop {
+    @include body-fontDesign;
+    width: 445px;
+  }
+  @include tablet-mobile {
+    @include body-fontDesignSmall;
+  }
 }

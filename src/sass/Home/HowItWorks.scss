@@ -22,7 +22,6 @@
 
 .HIWSectionContainer {
   display: flex;
-
   @include desktop {
     gap: 95px;
     margin-right: 70px;

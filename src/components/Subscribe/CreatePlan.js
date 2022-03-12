@@ -1,11 +1,33 @@
+import { widthContext } from "../../App";
+import { useContext } from "react";
+
 export default function CreatePlan() {
+  const width = useContext(widthContext);
+  //global variables in App.js
+  const tablet = window.$tabletWidth;
+  const mobile = window.$mobileWidth;
   return (
     <div className="CreatePlan--Container">
-      <img
-        src="/mainAssets/assets/plan/desktop/image-hero-blackcup.jpg"
-        alt="Cup of Coffee"
-        className="CreatePlan--heroPic"
-      />
+      {parseInt(width) > tablet ? (
+        <img
+          className="CreatePlan--heroPic"
+          src="/mainAssets/assets/plan/desktop/image-hero-blackcup.jpg"
+          alt="Cup of Coffee"
+        />
+      ) : parseInt(width) > mobile ? (
+        <img
+          className="CreatePlan--heroPic"
+          src="/mainAssets/assets/plan/tablet/image-hero-blackcup.jpg"
+          alt="Cup of Coffee"
+        />
+      ) : (
+        <img
+          className="CreatePlan--heroPic"
+          src="/mainAssets/assets/plan/mobile/image-hero-blackcup.jpg"
+          alt="Cup of Coffee"
+        />
+      )}
+
       <div className="CreatePlan--text">
         <div className="CreatePlan--title">Create a plan</div>
         <div className="CreatePlan--para">

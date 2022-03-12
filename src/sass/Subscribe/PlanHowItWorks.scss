@@ -1,19 +1,47 @@
 @use "../Mixins.scss" as *;
 
 .PlanHIWContainer {
-  width: 1280px;
-  margin: auto;
-  background-image: url("bg-steps.png");
-  background-repeat: no-repeat;
-  margin-top: 177px;
   border-radius: var(--borderRadius);
+  background-repeat: no-repeat;
+
+  @include desktop {
+    width: 1280px;
+    margin: auto;
+    background-image: url("bg-steps-desktop.png");
+    margin-top: 177px;
+  }
+  @include tablet {
+    width: 768px;
+    height: 640px;
+    margin: 144px auto 0px auto;
+    gap: 10px;
+    background-image: url("bg-steps-tablet.png");
+    padding: 97px 39px 70px 40px;
+  }
+  @include mobile {
+    width: 375px;
+    height: 1028px;
+    margin: 120px auto 42px auto;
+    padding-top: 24px;
+    background-image: url("bg-steps-mobile.png");
+  }
 }
 
 .PlanHIWSectionContainer {
   display: flex;
-  justify-content: center;
-  gap: 95px;
-  margin-right: 70px;
+  @include desktop {
+    gap: 95px;
+    margin-right: 70px;
+    justify-content: center;
+  }
+  @include tablet {
+    gap: 10px;
+  }
+  @include mobile {
+    flex-direction: column;
+
+    align-items: center;
+  }
 }
 
 .PlanHIWTitle {
@@ -23,17 +51,38 @@
 .PlanHIWNumber {
   @include H1-fontDesign;
   color: var(--paleOrange);
+  @include mobile {
+    margin: 56px auto 6px auto;
+  }
 }
 
 .PlanHIWSection {
-  width: 285px;
+  @include desktop {
+    width: 285px;
+  }
+  @include tablet {
+    width: 223px;
+  }
+  @include mobile {
+    width: 327px;
+    display: grid;
+    justify-items: center;
+    justify-self: center;
+  }
 }
 
 .PlanHIWCircles {
   display: flex;
-  padding: 91px 0px 0px 85px;
-
-  gap: 351px;
+  @include desktop {
+    gap: 351px;
+    padding: 91px 0px 0px 85px;
+  }
+  @include tablet {
+    gap: 204px;
+  }
+  @include mobile {
+    display: none;
+  }
 }
 
 .PlanHIWCircle {
@@ -50,17 +99,47 @@
   width: 760px;
   align-self: center;
   position: absolute;
-  margin-left: 15px;
+
   z-index: 0;
+  @include desktop {
+    width: 760px;
+    margin-left: 15px;
+  }
+  @include tablet {
+    width: 467px;
+    margin-left: 15px;
+  }
 }
 
 .PlanHIWSectionTitle {
-  @include H3-fontDesign;
   color: var(--lightCream);
+
+  @include desktop {
+    @include H3-fontDesign;
+  }
+  @include tablet-mobile {
+    @include H3-fontDesignSmall;
+  }
+  @include mobile {
+    width: max-content;
+    margin: 18px 0px 9px 0px;
+  }
 }
 
 .PlanHIWPara {
-  @include body-fontDesign;
   color: var(--lightCream);
-  margin-bottom: 64px;
+
+  @include desktop {
+    @include body-fontDesign;
+    margin-bottom: 64px;
+  }
+  @include tablet {
+    @include body-fontDesignSmall;
+    margin-bottom: 64px;
+  }
+  @include mobile {
+    text-align: center;
+    margin-bottom: 0px;
+    @include body-fontDesignSmall;
+  }
 }

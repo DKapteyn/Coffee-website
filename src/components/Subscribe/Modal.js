@@ -1,8 +1,13 @@
 import OrderSummaryTemplate from "./OrderSummaryTemplate";
 import { summaryContext } from "../../pages/SubscribePage";
 import { useContext } from "react";
+import { widthContext } from "../../App";
+
 export default function Modal({ openModal, toggle }) {
   const { summary } = useContext(summaryContext);
+  const width = useContext(widthContext);
+  const mobile = window.$mobileWidth;
+
   if (!openModal) return null;
   let price = "$0";
 
@@ -50,10 +55,18 @@ export default function Modal({ openModal, toggle }) {
           selection if something is off. Subscription discount codes can also be
           redeemed at the checkout.
         </p>
-        <div className="Modal--totalAndButtonContainer">
-          <div className="Modal--monthTotal">{`${price}/mo`}</div>
-          <button className="Button">Checkout</button>
-        </div>
+        {parseInt(width) > mobile ? (
+          <div className="Modal--totalAndButtonContainer">
+            <div className="Modal--monthTotal">{`${price}/mo`}</div>
+            <button className="Button">Checkout</button>
+          </div>
+        ) : (
+          <div className="Modal--totalAndButtonContainer">
+            <button className="Button modalButton">
+              Checkout -{` ${price} / mo`}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,15 +1,26 @@
-import { useReducer, createContext, useEffect, useState } from "react";
+import {
+  useReducer,
+  createContext,
+  useEffect,
+  useState,
+  useContext,
+} from "react";
 import { useLocation } from "react-router-dom";
 import CreatePlan from "../components/Subscribe/CreatePlan";
 import HowDoYouDrink from "../components/Subscribe/HowDoYouDrink";
 import HowItWorksTemplate from "../components/Shared/HowItWorksTemplate";
 import PlanList from "../components/Subscribe/PlanList";
+import { widthContext } from "../App";
 
 export const summaryContext = createContext("");
 
 export const highlightContext = createContext("");
 
 export default function SubscribePage() {
+  const width = useContext(widthContext);
+  //global variable in App.js
+  const tablet = window.$tabletWidth;
+
   const initialState = {
     how: "_____",
     type: "_____",
@@ -136,7 +147,8 @@ export default function SubscribePage() {
       <summaryContext.Provider value={{ summary, dispatch }}>
         <highlightContext.Provider value={{ highlight, setHighlight }}>
           <div className="PlanandHowDo--Container">
-            <PlanList />
+            {/*PlanList component only visible for desktop View*/}
+            {width > tablet && <PlanList />}
             <HowDoYouDrink />
           </div>
         </highlightContext.Provider>

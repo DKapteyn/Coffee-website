@@ -1,49 +1,8 @@
-import { useState, useContext, useEffect } from "react";
-import { highlightContext, summaryContext } from "../../pages/SubscribePage";
+import { useState, useContext } from "react";
+import { summaryContext } from "../../pages/SubscribePage";
 
 export default function Options(props) {
   const [dropDown, setDropDown] = useState(false);
-
-  const { setHighlight } = useContext(highlightContext);
-  const { summary } = useContext(summaryContext);
-
-  // changes the highlighted option in the Planlist component
-  useEffect(() => {
-    function changeHightlight() {
-      //default is one highlighted
-      const sumRegex = /_+/;
-      const blankHighlight = {
-        one: "",
-        two: "",
-        three: "",
-        four: "",
-        five: "",
-      };
-
-      if (
-        sumRegex.test(summary.how) === false &&
-        sumRegex.test(summary.type) === false &&
-        sumRegex.test(summary.amount) === false &&
-        summary.grind !== undefined
-      ) {
-        setHighlight({ ...blankHighlight, five: "active" });
-      } else if (
-        sumRegex.test(summary.how) === false &&
-        sumRegex.test(summary.type) === false &&
-        sumRegex.test(summary.amount) === false
-      ) {
-        setHighlight({ ...blankHighlight, four: "active" });
-      } else if (
-        sumRegex.test(summary.how) === false &&
-        sumRegex.test(summary.type) === false
-      ) {
-        setHighlight({ ...blankHighlight, three: "active" });
-      } else if (sumRegex.test(summary.how) === false) {
-        setHighlight({ ...blankHighlight, two: "active" });
-      }
-    }
-    changeHightlight();
-  }, [summary, setHighlight]);
 
   //Changes class to update the color of the option
   const [clickedColor, setClickedColor] = useState({
@@ -78,18 +37,21 @@ export default function Options(props) {
 
   return (
     <div className="Options--Container">
-      <div onClick={ChangeDropDown} className="Options--MainTitleContainer">
-        <h2 className="Options--MainTitle">{props.MainTitle}</h2>
-        <img
-          //CAUSES ARROW TO FLIP WHEN DROPDOWN IS OPEN
-          style={
-            dropDown === true
-              ? { transform: "scaleY(-1)" }
-              : { transform: "scaleY(1)" }
-          }
-          src="/mainAssets/assets/plan/desktop/icon-arrow.svg"
-          alt="arrow"
-        />
+      <div className="Options--Container">
+        <div onClick={ChangeDropDown} className="Options--MainTitleContainer">
+          <h2 className="Options--MainTitle">{props.MainTitle}</h2>
+          <img
+            className="Options--Arrow"
+            //CAUSES ARROW TO FLIP WHEN DROPDOWN IS OPEN
+            style={
+              dropDown === true
+                ? { transform: "scaleY(-1)" }
+                : { transform: "scaleY(1)" }
+            }
+            src="/mainAssets/assets/plan/desktop/icon-arrow.svg"
+            alt="arrow"
+          />
+        </div>
       </div>
 
       {dropDown === true && (

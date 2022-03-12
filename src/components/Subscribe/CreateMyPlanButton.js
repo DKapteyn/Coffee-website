@@ -8,33 +8,26 @@ export default function CreateMyPlanButton({ toggle }) {
   const underlineRegex = /_+/;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "flex-end",
-        marginTop: "55px",
-        marginBottom: "168px",
-      }}
-    >
+    <div className="myPlanButton">
       {/* will display if all options have been picked */}
       {underlineRegex.test(summary.how) === false &&
         underlineRegex.test(summary.type) === false &&
         underlineRegex.test(summary.amount) === false &&
         (summary.grind !== undefined || summary.grindNeed === false) &&
         underlineRegex.test(summary.frequency) === false && (
-          <button onClick={toggle} className="Button">
+          <button onClick={toggle} className="Button ">
             Create my plan!
           </button>
         )}
+
       {/* will display if any options has not been picked */}
-      {underlineRegex.test(summary.how) ||
+      {(underlineRegex.test(summary.how) ||
         underlineRegex.test(summary.type) ||
         underlineRegex.test(summary.amount) ||
-        summary.grind === undefined ||
-        summary.grindNeed === false ||
-        (underlineRegex.test(summary.frequency) && (
-          <button className="blankButton">Create my plan!</button>
-        ))}
+        (summary.grind === undefined && summary.grindNeed === true) ||
+        underlineRegex.test(summary.frequency)) && (
+        <button className="blankButton ">Create my plan!</button>
+      )}
     </div>
   );
 }

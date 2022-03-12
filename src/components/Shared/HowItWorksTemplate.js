@@ -1,7 +1,7 @@
 export default function HowItWorksTemplate({ classPrefix }) {
   return (
     <div className={`${classPrefix}Container`}>
-      <h4 className={`${classPrefix}Title`}>How it works</h4>
+      <h4 className={`${classPrefix}Title `}>How it works</h4>
       <div className={`${classPrefix}Circles`}>
         <div className={`${classPrefix}Circle`}></div>
         <div className={`${classPrefix}Line`}></div>
