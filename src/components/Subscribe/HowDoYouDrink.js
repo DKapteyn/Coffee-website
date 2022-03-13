@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import OrderSummaryTemplate from "./OrderSummaryTemplate";
 import CreateMyPlanButton from "./CreateMyPlanButton";
 import Modal from "./Modal";
+import { AnimatePresence } from "framer-motion";
 
 export default function HowDoYouDrink() {
   const { dispatch } = useContext(summaryContext);
@@ -77,7 +78,11 @@ export default function HowDoYouDrink() {
       />
       <OrderSummaryTemplate classPrefix={""} />
       <CreateMyPlanButton toggle={toggleModal} />
-      <Modal openModal={openModal} toggle={toggleModal} />
+      <AnimatePresence>
+        {openModal === true && (
+          <Modal openModal={openModal} toggle={toggleModal} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
