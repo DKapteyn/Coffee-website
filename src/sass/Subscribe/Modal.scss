@@ -1,7 +1,6 @@
 @use "../Mixins.scss" as *;
 
 .Modal--Overlay {
-  display: grid;
   z-index: 1000;
   position: fixed;
   top: 0;
@@ -13,7 +12,9 @@
 
 .Modal--Container {
   position: fixed;
-  place-self: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1000;
   height: 597px;
   background-color: var(--lightCream);

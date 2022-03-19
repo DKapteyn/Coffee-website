@@ -2,7 +2,6 @@ import OrderSummaryTemplate from "./OrderSummaryTemplate";
 import { summaryContext } from "../../pages/SubscribePage";
 import { useContext } from "react";
 import { widthContext } from "../../App";
-import { motion } from "framer-motion";
 
 export default function Modal({ openModal, toggle }) {
   const { summary } = useContext(summaryContext);
@@ -46,13 +45,7 @@ export default function Modal({ openModal, toggle }) {
 
   return (
     <div onClick={toggle} className="Modal--Overlay">
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ time: 0.5 }}
-        exit={{ opacity: 0, y: 500 }}
-        className="Modal--Container"
-      >
+      <div className="Modal--Container">
         <div className="Modal--titleContainer">
           <div className="Modal--title">Order Summary</div>
         </div>
@@ -74,7 +67,7 @@ export default function Modal({ openModal, toggle }) {
             </button>
           </div>
         )}
-      </motion.div>
+      </div>
     </div>
   );
 }
