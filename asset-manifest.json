@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.9bc1eccb.css",
-    "main.js": "/static/js/main.f071d6a9.js",
-    "static/media/bg-steps-desktop.png": "/static/media/bg-steps-desktop.4046ff6c0ecb473e1610.png",
-    "static/media/bg-quality-desktop.png": "/static/media/bg-quality-desktop.f1c54a85a260570b242b.png",
-    "static/media/bg-steps-tablet.png": "/static/media/bg-steps-tablet.a9764365f61a185a2dc2.png",
-    "static/media/bg-steps-mobile.png": "/static/media/bg-steps-mobile.b84a0ca5798251eba22c.png",
-    "static/media/bg-quality-tablet.png": "/static/media/bg-quality-tablet.75667ec407a772b26514.png",
-    "static/media/bg-quality-mobile.png": "/static/media/bg-quality-mobile.bc64fec673a5cbc8c999.png",
-    "static/media/modifiedLogo.svg": "/static/media/modifiedLogo.dc9105bfa18030f6f0be47cdac18360d.svg",
-    "index.html": "/index.html",
-    "main.9bc1eccb.css.map": "/static/css/main.9bc1eccb.css.map",
-    "main.f071d6a9.js.map": "/static/js/main.f071d6a9.js.map"
+    "main.css": "/Coffee-website/static/css/main.a6f0419b.css",
+    "main.js": "/Coffee-website/static/js/main.02c0ec1b.js",
+    "static/media/bg-steps-desktop.png": "/Coffee-website/static/media/bg-steps-desktop.4046ff6c0ecb473e1610.png",
+    "static/media/bg-quality-desktop.png": "/Coffee-website/static/media/bg-quality-desktop.f1c54a85a260570b242b.png",
+    "static/media/bg-steps-tablet.png": "/Coffee-website/static/media/bg-steps-tablet.a9764365f61a185a2dc2.png",
+    "static/media/bg-steps-mobile.png": "/Coffee-website/static/media/bg-steps-mobile.b84a0ca5798251eba22c.png",
+    "static/media/bg-quality-tablet.png": "/Coffee-website/static/media/bg-quality-tablet.75667ec407a772b26514.png",
+    "static/media/bg-quality-mobile.png": "/Coffee-website/static/media/bg-quality-mobile.bc64fec673a5cbc8c999.png",
+    "static/media/modifiedLogo.svg": "/Coffee-website/static/media/modifiedLogo.dc9105bfa18030f6f0be47cdac18360d.svg",
+    "index.html": "/Coffee-website/index.html",
+    "main.a6f0419b.css.map": "/Coffee-website/static/css/main.a6f0419b.css.map",
+    "main.02c0ec1b.js.map": "/Coffee-website/static/js/main.02c0ec1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bc1eccb.css",
-    "static/js/main.f071d6a9.js"
+    "static/css/main.a6f0419b.css",
+    "static/js/main.02c0ec1b.js"
   ]
 }
