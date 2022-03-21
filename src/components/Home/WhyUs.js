@@ -11,7 +11,10 @@ export default function WhyUs() {
       </div>
       <div className="threeBenefitsContainer">
         <div className="benefitContainer">
-          <img src="assets/home/desktop/icon-coffee-bean.svg" alt="bean icon" />
+          <img
+            src="assets/mainpage/desktop/icon-coffee-bean.svg"
+            alt="bean icon"
+          />
           <div className="threeBenefitsText">
             <h4 className="threeBenefitsTitle">Best quality</h4>
             <p className="threeBenefitsPara">
@@ -21,7 +24,7 @@ export default function WhyUs() {
           </div>
         </div>
         <div className="benefitContainer">
-          <img src="assets/home/desktop/icon-gift.svg" alt="gift icon" />
+          <img src="assets/mainpage/desktop/icon-gift.svg" alt="gift icon" />
           <div className="threeBenefitsText">
             <h4 className="threeBenefitsTitle">Exclusive benefits</h4>
             <p className="threeBenefitsPara">
@@ -33,7 +36,7 @@ export default function WhyUs() {
         <div className="benefitContainer">
           <img
             id="truckPic"
-            src="assets/home/desktop/icon-truck.svg"
+            src="assets/mainpage/desktop/icon-truck.svg"
             alt="bean icon"
           />
           <div className="threeBenefitsText">

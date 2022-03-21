@@ -8,7 +8,7 @@ export default function OurCollection() {
         <div className="coffeeType">
           <img
             className="desktopBeanBagPic"
-            src="assets/home/desktop/image-gran-espresso.png"
+            src="assets/mainpage/desktop/image-gran-espresso.png"
             alt="Coffee bean bag"
           />
           <div className="beanText">
@@ -22,7 +22,7 @@ export default function OurCollection() {
         <div className="coffeeType">
           <img
             className="desktopBeanBagPic"
-            src="assets/home/desktop/image-planalto.png"
+            src="assets/mainpage/desktop/image-planalto.png"
             alt="Coffee bean bag"
           />
           <div className="beanText">
@@ -36,7 +36,7 @@ export default function OurCollection() {
         <div className="coffeeType">
           <img
             className="desktopBeanBagPic"
-            src="assets/home/desktop/image-piccollo.png"
+            src="assets/mainpage/desktop/image-piccollo.png"
             alt="Coffee bean bag"
           />
           <div className="beanText">
@@ -50,7 +50,7 @@ export default function OurCollection() {
         <div className="coffeeType">
           <img
             className="desktopBeanBagPic"
-            src="assets/home/desktop/image-danche.png"
+            src="assets/mainpage/desktop/image-danche.png"
             alt="Coffee bean bag"
           />
           <div className="beanText">
