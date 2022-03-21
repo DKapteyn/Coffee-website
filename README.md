@@ -1,3 +1,3 @@
-# Coffee Marketing App
+# Coffee Marketing Site
 
-this app was made using react and Sass 
+This 3 page marketing website was created using Sass and React.
