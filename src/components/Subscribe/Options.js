@@ -44,7 +44,7 @@ export default function Options(props) {
           <h2 className="Options--MainTitle">{props.MainTitle}</h2>
           <img
             className="Options--Arrow"
-            src="/mainAssets/assets/plan/desktop/icon-arrow.svg"
+            src="assets/plan/desktop/icon-arrow.svg"
             alt="arrow"
           />
         </div>
@@ -63,7 +63,7 @@ export default function Options(props) {
                 ? { transform: "scaleY(-1)" }
                 : { transform: "scaleY(1)" }
             }
-            src="/mainAssets/assets/plan/desktop/icon-arrow.svg"
+            src="assets/plan/desktop/icon-arrow.svg"
             alt="arrow"
           />
         </div>

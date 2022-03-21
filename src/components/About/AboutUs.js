@@ -13,21 +13,21 @@ export default function AboutUs() {
       {width > tablet ? (
         //image for desktop
         <img
-          src="/mainAssets/assets/about/desktop/image-hero-whitecup.jpg"
+          src="assets/about/desktop/image-hero-whitecup.jpg"
           alt="Coffee Cup Pic"
           className="AboutUs--heroPic"
         />
       ) : //image for tablet
       width > mobile ? (
         <img
-          src="/mainAssets/assets/about/tablet/image-hero-whitecup.jpg"
+          src="assets/about/tablet/image-hero-whitecup.jpg"
           alt="Coffee Cup Pic"
           className="AboutUs--heroPic"
         />
       ) : (
         //image for mobile
         <img
-          src="/mainAssets/assets/about/mobile/image-hero-whitecup.jpg"
+          src="assets/about/mobile/image-hero-whitecup.jpg"
           alt="Coffee Cup Pic"
           className="AboutUs--heroPic"
         />

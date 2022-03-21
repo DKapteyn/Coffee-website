@@ -21,7 +21,7 @@ export default function TopNav() {
     <div className="TopNav--container">
       <img
         className="TopNav--logo"
-        src="/mainAssets/assets/shared/desktop/logo.svg"
+        src="assets/shared/desktop/logo.svg"
         alt="Logo"
       />
 

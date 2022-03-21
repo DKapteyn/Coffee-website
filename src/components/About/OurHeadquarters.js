@@ -6,7 +6,7 @@ export default function OurHeadquarters() {
         <div className="OurHeadquarters--Location">
           <img
             className="UKPic"
-            src="/mainAssets/assets/about/desktop/illustration-uk.svg"
+            src="assets/about/desktop/illustration-uk.svg"
             alt="United Kingdom"
           />
           <div className="OurHeadquarters--title">United Kingdom</div>
@@ -20,7 +20,7 @@ export default function OurHeadquarters() {
         <div className="OurHeadquarters--Location">
           <img
             className="canadaPic"
-            src="/mainAssets/assets/about/desktop/illustration-canada.svg"
+            src="assets/about/desktop/illustration-canada.svg"
             alt="Canada"
           />
           <div className="OurHeadquarters--title">Canada</div>
@@ -34,7 +34,7 @@ export default function OurHeadquarters() {
         <div className="OurHeadquarters--Location">
           <img
             className="australiaPic"
-            src="/mainAssets/assets/about/desktop/illustration-australia.svg"
+            src="assets/about/desktop/illustration-australia.svg"
             alt="Australia"
           />
           <div className="OurHeadquarters--title">Australia</div>

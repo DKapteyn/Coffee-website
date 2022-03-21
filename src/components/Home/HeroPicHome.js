@@ -12,19 +12,19 @@ export default function HeroPicHome() {
       {parseInt(width) > tablet ? (
         <img
           className="home--heroPic"
-          src="/mainAssets/assets/home/desktop/image-hero-coffeepress.jpg"
+          src="assets/home/desktop/image-hero-coffeepress.jpg"
           alt="home coffee pic"
         />
       ) : parseInt(width) > mobile ? (
         <img
           className="home--heroPic"
-          src="/mainAssets/assets/home/tablet/image-hero-coffeepress.jpg"
+          src="assets/home/tablet/image-hero-coffeepress.jpg"
           alt="home coffee pic"
         />
       ) : (
         <img
           className="home--heroPic"
-          src="/mainAssets/assets/home/mobile/image-hero-coffeepress.jpg"
+          src="assets/home/mobile/image-hero-coffeepress.jpg"
           alt="home coffee pic"
         />
       )}

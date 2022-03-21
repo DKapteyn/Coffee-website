@@ -25,19 +25,19 @@ export default function UncompromisingQuality() {
         //desktop Image
         width > tablet ? (
           <img
-            src="/mainAssets/assets/about/desktop/image-quality.jpg"
+            src="assets/about/desktop/image-quality.jpg"
             alt="latte"
             className="UncompromisingQuality--img"
           /> //tablet Image
         ) : width > mobile ? (
           <img
-            src="/mainAssets/assets/about/tablet/image-quality.jpg"
+            src="assets/about/tablet/image-quality.jpg"
             alt="latte"
             className="UncompromisingQuality--img"
           /> // mobile Image
         ) : (
           <img
-            src="/mainAssets/assets/about/mobile/image-quality.jpg"
+            src="assets/about/mobile/image-quality.jpg"
             alt="latte"
             className="UncompromisingQuality--img"
           />

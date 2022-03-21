@@ -11,19 +11,19 @@ export default function CreatePlan() {
       {parseInt(width) > tablet ? (
         <img
           className="CreatePlan--heroPic"
-          src="/mainAssets/assets/plan/desktop/image-hero-blackcup.jpg"
+          src="assets/plan/desktop/image-hero-blackcup.jpg"
           alt="Cup of Coffee"
         />
       ) : parseInt(width) > mobile ? (
         <img
           className="CreatePlan--heroPic"
-          src="/mainAssets/assets/plan/tablet/image-hero-blackcup.jpg"
+          src="assets/plan/tablet/image-hero-blackcup.jpg"
           alt="Cup of Coffee"
         />
       ) : (
         <img
           className="CreatePlan--heroPic"
-          src="/mainAssets/assets/plan/mobile/image-hero-blackcup.jpg"
+          src="assets/plan/mobile/image-hero-blackcup.jpg"
           alt="Cup of Coffee"
         />
       )}

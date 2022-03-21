@@ -14,21 +14,21 @@ export default function OurCommitment() {
         width > tablet ? (
           <img
             className="OurCommitment--image"
-            src="/mainAssets/assets/about/desktop/image-commitment.jpg"
+            src="assets/about/desktop/image-commitment.jpg"
             alt="Barista"
           />
         ) : //Tablet Image
         width > mobile ? (
           <img
             className="OurCommitment--image"
-            src="/mainAssets/assets/about/tablet/image-commitment.jpg"
+            src="assets/about/tablet/image-commitment.jpg"
             alt="Barista"
           />
         ) : (
           //Mobile Image
           <img
             className="OurCommitment--image"
-            src="/mainAssets/assets/about/mobile/image-commitment.jpg"
+            src="assets/about/mobile/image-commitment.jpg"
             alt="Barista"
           />
         )

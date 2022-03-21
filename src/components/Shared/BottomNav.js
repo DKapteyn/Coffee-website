@@ -17,15 +17,12 @@ export default function BottomNav() {
       {/* </div> */}
       <div className="BottomNav--socialMedia">
         <img
-          src="/mainAssets/assets/shared/desktop/icon-facebook.svg"
+          src="assets/shared/desktop/icon-facebook.svg"
           alt="Facebook Icon"
         />
+        <img src="assets/shared/desktop/icon-twitter.svg" alt="Twitter Icon" />
         <img
-          src="/mainAssets/assets/shared/desktop/icon-twitter.svg"
-          alt="Twitter Icon"
-        />
-        <img
-          src="/mainAssets/assets/shared/desktop/icon-instagram.svg"
+          src="assets/shared/desktop/icon-instagram.svg"
           alt="Instagram Icon"
         />
       </div>
