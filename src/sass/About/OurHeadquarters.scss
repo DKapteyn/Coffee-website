@@ -28,12 +28,16 @@
   justify-content: center;
   margin: 0px auto 168px auto;
   width: 100%;
+  @include desktop {
+    gap: 95px;
+  }
 
   @include mobile {
     flex-direction: column;
     width: 223px;
     margin: 120px auto;
     text-align: center;
+    gap: 80px;
   }
 }
 
@@ -65,12 +69,8 @@
   @include body-fontDesign;
   @include desktop {
     width: 285px;
-    margin-right: 95px;
   }
   @include tablet {
     width: 223px;
-  }
-  @include mobile {
-    margin-bottom: 80px;
   }
 }
