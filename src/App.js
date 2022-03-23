@@ -32,10 +32,13 @@ function App() {
       <widthContext.Provider value={width}>
         <TopNav />
         <Routes>
-          <Route path="/" element={<Navigate to="/Home" />} />
-          <Route path="/Home" element={<HomePage />} />
-          <Route path="/About" element={<AboutPage />} />
-          <Route path="/Subscribe" element={<SubscribePage />} />
+          <Route
+            path="/Coffee-website/"
+            element={<Navigate to="/Coffee-website/Home" />}
+          />
+          <Route path="/Coffee-website/Home" element={<HomePage />} />
+          <Route path="/Coffee-website/About" element={<AboutPage />} />
+          <Route path="/Coffee-website/Subscribe" element={<SubscribePage />} />
         </Routes>
         <BottomNav />
       </widthContext.Provider>
