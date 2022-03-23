@@ -32,7 +32,7 @@ export default function TopNav() {
         <img
           onClick={() => setDropDown(!dropDown)}
           className="TopNav--hamburger"
-          src="\mainAssets\assets\shared\mobile\icon-close.svg"
+          src="assets\shared\mobile\icon-close.svg"
           alt="X icon"
         />
       )}
@@ -41,7 +41,7 @@ export default function TopNav() {
         <img
           onClick={() => setDropDown(!dropDown)}
           className="TopNav--hamburger"
-          src="\mainAssets\assets\shared\mobile\icon-hamburger.svg"
+          src="assets\shared\mobile\icon-hamburger.svg"
           alt="hamburger icon"
         />
       )}
@@ -52,9 +52,9 @@ export default function TopNav() {
           onClick={() => setDropDown(false)}
         >
           <nav className="Nav--linksTop">
-            <Link to="Home">Home</Link>
-            <Link to="About">About Us</Link>
-            <Link to="Subscribe">Create Your Plan</Link>
+            <Link to="/Coffee-website/Home">Home</Link>
+            <Link to="/Coffee-website/About">About Us</Link>
+            <Link to="/Coffee-website/Subscribe">Create Your Plan</Link>
           </nav>
         </div>
       )}

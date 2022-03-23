@@ -5,24 +5,30 @@
 
   @include desktop {
     width: 1110px;
-    gap: 125px;
     margin: 168px auto 0px auto;
   }
   @include tablet {
     width: 688px;
-    gap: 69px;
     margin: 144px auto 0px auto;
   }
   @include mobile {
     flex-direction: column;
     width: 327px;
     margin: 120px auto 0px auto;
-    gap: 48px;
   }
 }
 
 .OurCommitment--image {
   border-radius: 10px;
+  @include desktop {
+    margin-right: 125px;
+  }
+  @include tablet {
+    margin-right: 69px;
+  }
+  @include mobile {
+    margin-bottom: 48px;
+  }
 }
 
 .OurCommitment--text {
