@@ -4,7 +4,7 @@ export default function SubPageButton({ secondClass }) {
   const navigate = useNavigate();
 
   function navSubscribe() {
-    navigate("/Subscribe");
+    navigate("/Coffee-website/Subscribe");
   }
   return (
     <button onClick={navSubscribe} className={`Button ${secondClass}`}>

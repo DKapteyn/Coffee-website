@@ -3,11 +3,11 @@
 .HIWContainer {
   @include tablet {
     width: 689px;
-    margin: 160px auto 0px auto;
+    margin: 130px auto 0px auto;
   }
   @include mobile {
     width: 327px;
-    margin: 120px auto 0px auto;
+    margin: 90px auto 0px auto;
   }
 }
 
@@ -22,6 +22,7 @@
 
 .HIWSectionContainer {
   display: flex;
+
   @include desktop {
     gap: 95px;
     margin-right: 70px;
@@ -36,12 +37,13 @@
 }
 
 .HIWCircles {
-  display: flex;
+  display: grid;
+
   @include desktop {
-    gap: 351px;
+    grid-template-columns: repeat(3, 379px);
   }
   @include tablet {
-    gap: 204px;
+    grid-template-columns: repeat(3, 234px);
   }
   @include mobile {
     display: none;
@@ -59,7 +61,6 @@
 
 .HIWLine {
   border-top: 2px solid var(--paleOrange);
-  width: 760px;
   align-self: center;
   position: absolute;
 

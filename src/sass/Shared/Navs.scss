@@ -5,7 +5,7 @@
 .Nav--linksTop {
   @include desktop-tablet {
     display: flex;
-    gap: 33px;
+
     align-items: center;
   }
   @include mobile {
@@ -18,7 +18,7 @@
 
     width: 100%;
     text-align: center;
-    gap: 32px;
+
     padding: 65px 0px;
     box-shadow: 0px 20px 20px white;
   }
@@ -27,6 +27,7 @@
     text-decoration: none;
     @include desktop-tablet {
       color: var(--grey);
+      margin-left: 33px;
       @include navMenu-fontDesign;
       margin-top: 5px;
     }
@@ -34,6 +35,7 @@
       @include H4-fontDesign;
       color: var(--darkGreyBlue);
       width: 100%;
+      margin-bottom: 32px;
     }
   }
 }
