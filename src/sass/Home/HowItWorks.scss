@@ -37,13 +37,13 @@
 }
 
 .HIWCircles {
-  display: grid;
+  display: flex;
 
   @include desktop {
-    grid-template-columns: repeat(3, 379px);
+    gap: 350px;
   }
   @include tablet {
-    grid-template-columns: repeat(3, 234px);
+    gap: 204px;
   }
   @include mobile {
     display: none;
